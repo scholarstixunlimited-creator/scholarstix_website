@@ -3,906 +3,465 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Scholarstix Unlimited Inc. | AI-Powered Operating Systems</title>
-<meta name="description" content="Scholarstix Unlimited Inc. designs AI-powered operating systems that replace operational chaos with control – for African SMMEs and beyond.">
-<meta name="author" content="Scholarstix Unlimited Inc.">
-<!-- Favicon (simple SVG data URI – works everywhere) -->
-<link rel="icon" type="image/png" href="scholarstix.png">
+<title>Scholarstix Unlimited Inc. | AI-Powered Operating Systems for African SMMEs</title>
+<meta name="description" content="Scholarstix Unlimited Inc. designs, develops and integrates AI-powered operating systems that replace operational chaos with control — built for African SMMEs across 12 industries."/>
+<meta name="keywords" content="AI business software Africa, SMME technology South Africa, POS system Android, events management app, healthcare management system, AI operating system, Johannesburg tech company, scholarstix"/>
+<meta name="author" content="Scholarstix Unlimited Inc."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://scholarstixunlimited-creator.github.io/scholarstix_website/"/>
+<meta property="og:title" content="Scholarstix Unlimited Inc. | AI-Powered Operating Systems"/>
+<meta property="og:description" content="AI-powered operating systems that replace operational chaos with control. Built for African SMMEs across 12 industries."/>
+<meta property="og:image" content="https://scholarstixunlimited-creator.github.io/scholarstix_website/scholarstix.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@ScholarstixU"/>
+<meta name="twitter:title" content="Scholarstix Unlimited Inc. | AI-Powered Operating Systems"/>
+<meta name="twitter:description" content="AI-powered operating systems that replace operational chaos with control. Built for African SMMEs."/>
+<meta name="twitter:image" content="https://scholarstixunlimited-creator.github.io/scholarstix_website/scholarstix.png"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Scholarstix Unlimited Inc.",
+  "alternateName": "Scholarstix",
+  "url": "https://scholarstixunlimited-creator.github.io/scholarstix_website/",
+  "logo": "https://scholarstixunlimited-creator.github.io/scholarstix_website/scholarstix.png",
+  "description": "AI-powered operating systems that replace operational chaos with control — built for African SMMEs across 12 industries.",
+  "email": "info@scholarstix.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Meredale, Johannesburg",
+    "addressCountry": "ZA"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Teboho Moloi",
+    "jobTitle": "Founder & CEO",
+    "url": "https://www.linkedin.com/in/teboho-moloi-scholarstix",
+    "sameAs": [
+      "https://www.linkedin.com/in/teboho-moloi-scholarstix",
+      "https://x.com/ScholarstixU"
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/teboho-moloi-scholarstix",
+    "https://x.com/ScholarstixU",
+    "https://www.instagram.com/scholarstix_unlimitedinc/",
+    "https://www.tiktok.com/@scholarstixunlimitedinc"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@scholarstix.com",
+    "contactType": "customer service",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
+
+<link rel="canonical" href="https://scholarstixunlimited-creator.github.io/scholarstix_website//"/>
+<link rel="icon" type="image/png" href="scholarstix.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
 <style>
-  :root {
-    --teal-900: #0a2e28;
-    --teal-800: #123d35;
-    --teal-700: #1a5249;
-    --teal-600: #1f6358;
-    --teal-500: #237a6b;
-    --teal-400: #2a9180;
-    --teal-300: #3aae9b;
-    --teal-200: #6ecbbf;
-    --teal-100: #a8e4db;
-    --teal-50:  #e2f5f2;
-    --green-500: #2fa84f;
-    --green-400: #3dc45f;
-    --green-300: #5ed17c;
-    --circuit-blue: #2b7de9;
-    --circuit-blue-light: #5aa3f5;
-    --gold: #c9a84c;
-    --white: #ffffff;
-    --off-white: #f6faf9;
-    --text-dark: #0d1f1c;
-    --text-mid: #2e4d47;
-    --text-muted: #5a7a74;
-    --border: rgba(26,83,73,0.15);
-    --shadow-card: 0 8px 40px rgba(10,46,40,0.12);
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
-    --radius: 12px;
-    --radius-lg: 20px;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--font-body);
-    color: var(--text-dark);
-    background: var(--off-white);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: rgba(10,46,40,0.97);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(58,174,155,0.2);
-    padding: 0 2rem;
-    height: 72px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-
-  .nav-brand {
-    display: flex; align-items: center; gap: 14px;
-    text-decoration: none;
-  }
-
-  .nav-logo-circle {
-    width: 44px; height: 44px;
-    background: transparent;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .nav-logo-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .nav-brand-text {
-    display: flex; flex-direction: column; line-height: 1.1;
-  }
-
-  .nav-brand-name {
-    font-family: var(--font-display);
-    font-size: 15px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.01em;
-  }
-
-  .nav-brand-tag {
-    font-size: 10px;
-    color: var(--teal-200);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .nav-links {
-    display: flex; align-items: center; gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--teal-100);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--teal-300); }
-
-  .nav-cta {
-    background: var(--teal-400);
-    color: #fff !important;
-    padding: 9px 20px;
-    border-radius: 8px;
-    font-weight: 600 !important;
-    transition: background 0.2s !important;
-  }
-
-  .nav-cta:hover { background: var(--teal-300) !important; color: #fff !important; }
-
-  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-  .nav-hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; display: block; }
-
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    background: var(--teal-900);
-    display: flex; align-items: center;
-    padding: 120px 2rem 80px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-bg-pattern {
-    position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 70% 30%, rgba(42,145,128,0.15) 0%, transparent 55%),
-      radial-gradient(circle at 20% 80%, rgba(43,125,233,0.1) 0%, transparent 45%);
-    pointer-events: none;
-  }
-
-  .hero-grid-lines {
-    position: absolute; inset: 0; pointer-events: none;
-    background-image:
-      linear-gradient(rgba(58,174,155,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(58,174,155,0.05) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .hero-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4rem; align-items: center;
-    position: relative; z-index: 1;
-  }
-
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(58,174,155,0.15);
-    border: 1px solid rgba(58,174,155,0.3);
-    border-radius: 100px;
-    padding: 6px 16px;
-    font-size: 12px;
-    color: var(--teal-200);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    width: 8px; height: 8px;
-    background: var(--green-400);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%,100%{opacity:1;transform:scale(1)}
-    50%{opacity:0.5;transform:scale(1.3)}
-  }
-
-  .hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    font-weight: 900;
-    color: #fff;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-title .accent { color: var(--teal-300); }
-  .hero-title .accent2 { color: var(--green-300); }
-
-  .hero-desc {
-    font-size: 1.1rem;
-    color: var(--teal-100);
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
-    max-width: 480px;
-  }
-
-  .hero-actions {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--teal-400);
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    border: none; cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-
-  .btn-primary:hover { background: var(--teal-300); transform: translateY(-2px); }
-
-  .btn-outline {
-    background: transparent;
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    border: 1.5px solid rgba(255,255,255,0.3);
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .btn-outline:hover { border-color: var(--teal-300); background: rgba(58,174,155,0.1); }
-
-  .hero-stats {
-    display: flex; gap: 2rem; margin-top: 3rem;
-  }
-
-  .hero-stat .num {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--teal-300);
-  }
-
-  .hero-stat .lbl {
-    font-size: 12px;
-    color: var(--teal-200);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .hero-visual {
-    display: flex; justify-content: center; align-items: center;
-  }
-
-  .hero-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(58,174,155,0.25);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem;
-    width: 100%;
-    max-width: 420px;
-    backdrop-filter: blur(8px);
-  }
-
-  .hero-card-header {
-    font-size: 12px;
-    color: var(--teal-200);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-  }
-
-  .segment-list {
-    display: flex; flex-direction: column; gap: 10px;
-  }
-
-  .segment-item {
-    display: flex; align-items: center; gap: 12px;
-    padding: 10px 14px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 8px;
-    border: 1px solid rgba(58,174,155,0.15);
-    font-size: 13px;
-    color: var(--teal-100);
-    transition: background 0.2s;
-  }
-
-  .segment-item:hover { background: rgba(58,174,155,0.12); }
-
-  .seg-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .seg-dot.green { background: var(--green-400); }
-  .seg-dot.blue  { background: var(--circuit-blue-light); }
-  .seg-dot.gold  { background: var(--gold); }
-  .seg-dot.teal  { background: var(--teal-300); }
-
-  .seg-brand {
-    margin-left: auto;
-    font-size: 11px;
-    color: var(--teal-400);
-    font-weight: 600;
-    letter-spacing: 0.04em;
-  }
-
-  /* ── SECTION STRUCTURE ── */
-  section { padding: 100px 2rem; }
-
-  .container { max-width: 1200px; margin: 0 auto; }
-
-  .section-eyebrow {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--teal-600);
-    margin-bottom: 0.75rem;
-  }
-
-  .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 900;
-    color: var(--teal-900);
-    line-height: 1.15;
-    margin-bottom: 1rem;
-  }
-
-  .section-sub {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    line-height: 1.8;
-  }
-
-  .section-header { margin-bottom: 3.5rem; }
-
-  /* ── ABOUT ── */
-  #about { background: #fff; }
-
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 5rem; align-items: center;
-  }
-
-  .about-img-wrap {
-    position: relative;
-  }
-
-  .about-visual {
-    background: linear-gradient(135deg, var(--teal-800), var(--teal-600));
-    border-radius: var(--radius-lg);
-    padding: 3rem;
-    color: #fff;
-    position: relative; overflow: hidden;
-  }
-
-  .about-visual::before {
-    content: '';
-    position: absolute; top: -40px; right: -40px;
-    width: 200px; height: 200px;
-    background: rgba(58,174,155,0.15);
-    border-radius: 50%;
-  }
-
-  .about-visual-quote {
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
-    position: relative; z-index: 1;
-  }
-
-  .about-visual-tag {
-    font-size: 12px;
-    color: var(--teal-200);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    position: relative; z-index: 1;
-  }
-
-  .about-accent-card {
-    position: absolute; bottom: -20px; right: -20px;
-    background: var(--teal-400);
-    border-radius: 12px;
-    padding: 1.2rem 1.5rem;
-    color: #fff;
-    font-size: 13px;
-    box-shadow: 0 10px 30px rgba(26,83,73,0.3);
-  }
-
-  .about-accent-num {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1;
-  }
-
-  .about-content p { color: var(--text-mid); margin-bottom: 1.2rem; line-height: 1.85; }
-
-  .about-features { display: flex; flex-direction: column; gap: 12px; margin-top: 1.5rem; }
-
-  .about-feature {
-    display: flex; align-items: flex-start; gap: 12px;
-  }
-
-  .feature-icon {
-    width: 36px; height: 36px; flex-shrink: 0;
-    background: var(--teal-50);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  .feature-icon svg { width: 18px; height: 18px; }
-
-  .feature-text { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
-  .feature-text strong { color: var(--teal-700); display: block; font-weight: 600; margin-bottom: 2px; }
-
-  /* ── VISION MISSION VALUES ── */
-  #vmv { background: var(--off-white); }
-
-  .vmv-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .vmv-card {
-    background: #fff;
-    border-radius: var(--radius-lg);
-    padding: 2.5rem 2rem;
-    border: 1px solid var(--border);
-    position: relative; overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
-  }
-
-  .vmv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
-
-  .vmv-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--teal-400), var(--green-400));
-  }
-
-  .vmv-icon {
-    width: 56px; height: 56px;
-    background: var(--teal-50);
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .vmv-icon svg { width: 28px; height: 28px; stroke: var(--teal-600); fill: none; stroke-width: 1.8; }
-
-  .vmv-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--teal-500);
-    margin-bottom: 0.5rem;
-  }
-
-  .vmv-title {
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--teal-900);
-    margin-bottom: 1rem;
-  }
-
-  .vmv-text { font-size: 14px; color: var(--text-muted); line-height: 1.8; }
-
-  /* Values section */
-  .values-grid {
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    gap: 1rem; margin-top: 2.5rem;
-  }
-
-  .value-pill {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background: #fff;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    transition: border-color 0.2s, transform 0.2s;
-  }
-
-  .value-pill:hover { border-color: var(--teal-400); transform: translateY(-4px); }
-
-  .value-icon-wrap {
-    width: 48px; height: 48px;
-    background: linear-gradient(135deg, var(--teal-50), #e8f8f4);
-    border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 1rem;
-  }
-
-  .value-icon-wrap svg { width: 22px; height: 22px; stroke: var(--teal-600); fill: none; stroke-width: 1.8; }
-
-  .value-name {
-    font-size: 13px; font-weight: 700;
-    color: var(--teal-800);
-    margin-bottom: 6px;
-    letter-spacing: 0.03em;
-  }
-
-  .value-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
-
-  /* ── HOW WE DELIVER ── */
-  #delivery { background: var(--teal-900); }
-
-  #delivery .section-title { color: #fff; }
-  #delivery .section-eyebrow { color: var(--teal-300); }
-  #delivery .section-sub { color: var(--teal-100); }
-
-  .delivery-steps {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem; margin-top: 1rem;
-  }
-
-  .delivery-step {
-    position: relative;
-    padding: 2rem 1.5rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(58,174,155,0.2);
-    border-radius: var(--radius-lg);
-    transition: background 0.25s, border-color 0.25s;
-    overflow: hidden;
-  }
-
-  .delivery-step:hover {
-    background: rgba(58,174,155,0.1);
-    border-color: rgba(58,174,155,0.4);
-  }
-
-  .step-num {
-    font-family: var(--font-display);
-    font-size: 4rem;
-    font-weight: 900;
-    color: rgba(58,174,155,0.12);
-    line-height: 1;
-    position: absolute; top: 1rem; right: 1.2rem;
-  }
-
-  .step-badge {
-    display: inline-flex;
-    align-items: center; justify-content: center;
-    width: 32px; height: 32px;
-    background: var(--teal-500);
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 1rem;
-  }
-
-  .step-title {
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--teal-100);
-    margin-bottom: 8px;
-    line-height: 1.3;
-  }
-
-  .step-desc { font-size: 13px; color: var(--teal-200); line-height: 1.65; }
-
-  .delivery-steps-row2 {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem; margin-top: 1.5rem;
-  }
-
-  /* ── SEGMENTS ── */
-  #segments { background: #fff; }
-
-  .segments-intro { margin-bottom: 3rem; }
-
-  .segments-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
-  }
-
-  .seg-card {
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    padding: 1.5rem 1.25rem;
-    position: relative; overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    background: #fff;
-    cursor: default;
-  }
-
-  .seg-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(10,46,40,0.1);
-    border-color: var(--teal-300);
-  }
-
-  .seg-card-accent {
-    position: absolute; top: 0; left: 0;
-    width: 4px; height: 100%;
-    border-radius: 0;
-  }
-
-  .seg-card-industry {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 6px;
-  }
-
-  .seg-card-name {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--teal-900);
-    margin-bottom: 4px;
-  }
-
-  .seg-card-brand {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--teal-600);
-    background: var(--teal-50);
-    border-radius: 100px;
-    padding: 3px 10px;
-    letter-spacing: 0.04em;
-  }
-
-  /* ── PRODUCTS ── */
-  #products { background: var(--off-white); }
-
-  .products-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .product-card {
-    background: #fff;
-    border-radius: var(--radius-lg);
-    padding: 2.5rem;
-    border: 1px solid var(--border);
-    display: flex; gap: 2rem; align-items: flex-start;
-    transition: transform 0.25s, box-shadow 0.25s;
-  }
-
-  .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
-
-  .product-icon-wrap {
-    width: 72px; height: 72px; flex-shrink: 0;
-    border-radius: 16px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 2rem;
-  }
-
-  .product-icon-wrap.green { background: linear-gradient(135deg, #d4f5e2, #a8e6c2); }
-  .product-icon-wrap.blue  { background: linear-gradient(135deg, #d5e9ff, #b0d4ff); }
-
-  .product-segment {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--teal-500);
-    margin-bottom: 4px;
-  }
-
-  .product-name {
-    font-family: var(--font-display);
-    font-size: 1.4rem; font-weight: 800;
-    color: var(--teal-900); margin-bottom: 8px;
-  }
-
-  .product-desc { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 1rem; }
-
-  .product-tag {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 12px; font-weight: 600;
-    background: var(--teal-50);
-    color: var(--teal-700);
-    border-radius: 100px;
-    padding: 4px 12px;
-    border: 1px solid rgba(26,83,73,0.12);
-  }
-
-  /* ── CONTACT ── */
-  #contact {
-    background: linear-gradient(135deg, var(--teal-800), var(--teal-900));
-    color: #fff;
-  }
-
-  #contact .section-title { color: #fff; }
-  #contact .section-eyebrow { color: var(--teal-300); }
-
-  .contact-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4rem; align-items: start;
-  }
-
-  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
-
-  .contact-item {
-    display: flex; align-items: flex-start; gap: 14px;
-  }
-
-  .contact-icon {
-    width: 44px; height: 44px; flex-shrink: 0;
-    background: rgba(58,174,155,0.15);
-    border: 1px solid rgba(58,174,155,0.25);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  .contact-icon svg { width: 20px; height: 20px; stroke: var(--teal-300); fill: none; stroke-width: 1.8; }
-
-  .contact-item-label { font-size: 11px; color: var(--teal-300); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 3px; }
-  .contact-item-val { font-size: 15px; color: var(--teal-100); }
-
-  .contact-form {
-    background: rgba(255,255,255,0.05);
-    border-radius: var(--radius-lg);
-    padding: 1rem;
-  }
-
-  .contact-form iframe {
-    border-radius: var(--radius-lg);
-    display: block;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--teal-900);
-    border-top: 1px solid rgba(58,174,155,0.15);
-    padding: 3rem 2rem 2rem;
-  }
-
-  .footer-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .footer-logo {
-    display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;
-  }
-
-  .footer-logo-circle {
-    width: 40px; height: 40px;
-    background: transparent;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-  }
-  .footer-logo-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .footer-logo-name {
-    font-family: var(--font-display);
-    font-size: 16px; font-weight: 700;
-    color: #fff;
-  }
-
-  .footer-logo-sub { font-size: 10px; color: var(--teal-300); letter-spacing: 0.06em; }
-
-  .footer-tagline { font-size: 13px; color: var(--teal-200); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
-
-  .footer-social { display: flex; gap: 10px; }
-
-  .social-btn {
-    width: 36px; height: 36px;
-    background: rgba(58,174,155,0.12);
-    border: 1px solid rgba(58,174,155,0.2);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; transition: background 0.2s;
-    text-decoration: none;
-  }
-
-  .social-btn:hover { background: rgba(58,174,155,0.25); }
-  .social-btn svg { width: 16px; height: 16px; stroke: var(--teal-200); fill: none; stroke-width: 1.8; }
-
-  .footer-col-title {
-    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--teal-300);
-    margin-bottom: 1rem;
-  }
-
-  .footer-links { display: flex; flex-direction: column; gap: 8px; }
-
-  .footer-links a {
-    font-size: 13px; color: var(--teal-100);
-    text-decoration: none; transition: color 0.2s;
-  }
-
-  .footer-links a:hover { color: var(--teal-300); }
-
-  .footer-bottom {
-    max-width: 1200px; margin: 2.5rem auto 0;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(58,174,155,0.12);
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 1rem;
-  }
-
-  .footer-bottom-text { font-size: 12px; color: var(--teal-300); }
-
-  .footer-bottom-links { display: flex; gap: 1.5rem; }
-  .footer-bottom-links a { font-size: 12px; color: var(--teal-300); text-decoration: none; transition: color 0.2s; }
-  .footer-bottom-links a:hover { color: var(--teal-200); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 960px) {
-    .hero-inner { grid-template-columns: 1fr; }
-    .hero-visual { display: none; }
-    .about-grid { grid-template-columns: 1fr; }
-    .vmv-grid { grid-template-columns: 1fr; }
-    .values-grid { grid-template-columns: repeat(2,1fr); }
-    .delivery-steps, .delivery-steps-row2 { grid-template-columns: repeat(2,1fr); }
-    .segments-grid { grid-template-columns: repeat(2,1fr); }
-    .products-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .footer-inner { grid-template-columns: 1fr 1fr; }
-    .nav-links { display: none; }
-    .nav-hamburger { display: flex; }
-  }
-
-  @media (max-width: 600px) {
-    section { padding: 70px 1.25rem; }
-    .segments-grid { grid-template-columns: 1fr; }
-    .delivery-steps, .delivery-steps-row2 { grid-template-columns: 1fr; }
-    .footer-inner { grid-template-columns: 1fr; }
-    .values-grid { grid-template-columns: repeat(2,1fr); }
-    .hero-stats { flex-wrap: wrap; gap: 1.2rem; }
-  }
-
-  /* ── ANIMATION ── */
-  .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-  .scroll-hint {
-    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-    color: var(--teal-300); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-    animation: bounce 2s infinite;
-  }
-
-  .scroll-hint-arrow { width: 18px; height: 18px; border-right: 2px solid; border-bottom: 2px solid; transform: rotate(45deg); border-color: var(--teal-300); }
-
-  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
-
-  .section-divider {
-    width: 48px; height: 4px;
-    background: linear-gradient(90deg, var(--teal-400), var(--green-400));
-    border-radius: 2px;
-    margin: 1rem 0 1.5rem;
-  }
+:root{
+  --teal-900:#0a2e28;--teal-800:#123d35;--teal-700:#1a5249;
+  --teal-600:#1f6358;--teal-500:#237a6b;--teal-400:#2a9180;
+  --teal-300:#3aae9b;--teal-200:#6ecbbf;--teal-100:#a8e4db;
+  --teal-50:#e2f5f2;
+  --green-500:#2fa84f;--green-400:#3dc45f;--green-300:#5ed17c;
+  --circuit-blue:#2b7de9;--circuit-blue-light:#5aa3f5;
+  --gold:#c9a84c;--white:#ffffff;--off-white:#f6faf9;
+  --text-dark:#0d1f1c;--text-mid:#2e4d47;--text-muted:#5a7a74;
+  --border:rgba(26,83,73,0.15);
+  --shadow-card:0 8px 40px rgba(10,46,40,0.12);
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --radius:12px;--radius-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--text-dark);background:var(--off-white);line-height:1.7;overflow-x:hidden;}
+
+/* SCROLL PROGRESS */
+#scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--teal-400),var(--green-400));z-index:2000;width:0%;transition:width 0.1s linear;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,46,40,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(58,174,155,0.2);padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.nav-logo-circle{width:44px;height:44px;background:transparent;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;}
+.nav-logo-circle img{width:100%;height:100%;object-fit:contain;}
+.nav-brand-text{display:flex;flex-direction:column;line-height:1.1;}
+.nav-brand-name{font-family:var(--font-display);font-size:15px;font-weight:700;color:#fff;letter-spacing:0.01em;}
+.nav-brand-tag{font-size:10px;color:var(--teal-200);letter-spacing:0.08em;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none;}
+.nav-links a{color:var(--teal-100);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.02em;transition:color 0.2s;}
+.nav-links a:hover{color:var(--teal-300);}
+.nav-cta{background:var(--teal-400);color:#fff!important;padding:9px 20px;border-radius:8px;font-weight:600!important;transition:background 0.2s!important;}
+.nav-cta:hover{background:var(--teal-300)!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.nav-hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;display:block;transition:transform 0.3s,opacity 0.3s;}
+
+/* COOKIE BANNER */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--teal-900);border-top:1px solid rgba(58,174,155,0.3);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;transform:translateY(100%);transition:transform 0.4s ease;}
+#cookie-banner.show{transform:translateY(0);}
+.cookie-text{font-size:13px;color:var(--teal-100);line-height:1.6;flex:1;min-width:200px;}
+.cookie-text a{color:var(--teal-300);cursor:pointer;text-decoration:underline;}
+.cookie-actions{display:flex;gap:0.75rem;flex-shrink:0;}
+.btn-cookie-accept{background:var(--teal-400);color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.2s;}
+.btn-cookie-accept:hover{background:var(--teal-300);}
+.btn-cookie-decline{background:transparent;color:var(--teal-200);border:1px solid rgba(58,174,155,0.3);padding:9px 16px;border-radius:8px;font-size:13px;cursor:pointer;transition:border-color 0.2s;}
+.btn-cookie-decline:hover{border-color:var(--teal-300);}
+
+/* HERO */
+#hero{min-height:100vh;background:var(--teal-900);display:flex;align-items:center;padding:120px 2rem 80px;position:relative;overflow:hidden;}
+.hero-bg-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 70% 30%,rgba(42,145,128,0.15) 0%,transparent 55%),radial-gradient(circle at 20% 80%,rgba(43,125,233,0.1) 0%,transparent 45%);pointer-events:none;}
+.hero-grid-lines{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(58,174,155,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(58,174,155,0.05) 1px,transparent 1px);background-size:60px 60px;}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(58,174,155,0.15);border:1px solid rgba(58,174,155,0.3);border-radius:100px;padding:6px 16px;font-size:12px;color:var(--teal-200);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-bottom:1.5rem;}
+.hero-eyebrow::before{content:'';width:8px;height:8px;background:var(--green-400);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1.5rem;}
+.hero-title .accent{color:var(--teal-300);}
+.hero-title .accent2{color:var(--green-300);}
+.hero-desc{font-size:1.1rem;color:var(--teal-100);margin-bottom:2.5rem;line-height:1.8;max-width:480px;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-primary{background:var(--teal-400);color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{background:var(--teal-300);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,0.3);cursor:pointer;transition:border-color 0.2s,background 0.2s;}
+.btn-outline:hover{border-color:var(--teal-300);background:rgba(58,174,155,0.1);}
+.hero-stats{display:flex;gap:2rem;margin-top:3rem;}
+.hero-stat .num{font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--teal-300);}
+.hero-stat .lbl{font-size:12px;color:var(--teal-200);text-transform:uppercase;letter-spacing:0.08em;}
+.hero-visual{display:flex;justify-content:center;align-items:center;}
+.hero-card{background:rgba(255,255,255,0.04);border:1px solid rgba(58,174,155,0.25);border-radius:var(--radius-lg);padding:2.5rem;width:100%;max-width:420px;backdrop-filter:blur(8px);}
+.hero-card-header{font-size:12px;color:var(--teal-200);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.5rem;font-weight:600;}
+.segment-list{display:flex;flex-direction:column;gap:10px;}
+.segment-item{display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.05);border-radius:8px;border:1px solid rgba(58,174,155,0.15);font-size:13px;color:var(--teal-100);transition:background 0.2s;}
+.segment-item:hover{background:rgba(58,174,155,0.12);}
+.seg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.seg-dot.green{background:var(--green-400);}
+.seg-dot.blue{background:var(--circuit-blue-light);}
+.seg-dot.gold{background:var(--gold);}
+.seg-dot.teal{background:var(--teal-300);}
+.seg-brand{margin-left:auto;font-size:11px;color:var(--teal-400);font-weight:600;letter-spacing:0.04em;}
+.scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--teal-300);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;animation:bounce 2s infinite;}
+.scroll-hint-arrow{width:18px;height:18px;border-right:2px solid;border-bottom:2px solid;transform:rotate(45deg);border-color:var(--teal-300);}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* SECTIONS */
+section{padding:100px 2rem;}
+.container{max-width:1200px;margin:0 auto;}
+.section-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal-600);margin-bottom:0.75rem;}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:var(--teal-900);line-height:1.15;margin-bottom:1rem;}
+.section-sub{font-size:1.05rem;color:var(--text-muted);max-width:600px;line-height:1.8;}
+.section-header{margin-bottom:3.5rem;}
+.section-divider{width:48px;height:4px;background:linear-gradient(90deg,var(--teal-400),var(--green-400));border-radius:2px;margin:1rem 0 1.5rem;}
+
+/* ABOUT */
+#about{background:#fff;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.about-img-wrap{position:relative;}
+.about-visual{background:linear-gradient(135deg,var(--teal-800),var(--teal-600));border-radius:var(--radius-lg);padding:3rem;color:#fff;position:relative;overflow:hidden;}
+.about-visual::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:rgba(58,174,155,0.15);border-radius:50%;}
+.about-visual-quote{font-family:var(--font-display);font-size:1.5rem;font-weight:700;line-height:1.3;margin-bottom:1.5rem;position:relative;z-index:1;}
+.about-visual-tag{font-size:12px;color:var(--teal-200);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;position:relative;z-index:1;}
+.about-accent-card{position:absolute;bottom:-20px;right:-20px;background:var(--teal-400);border-radius:12px;padding:1.2rem 1.5rem;color:#fff;font-size:13px;box-shadow:0 10px 30px rgba(26,83,73,0.3);}
+.about-accent-num{font-family:var(--font-display);font-size:2rem;font-weight:900;line-height:1;}
+.about-content p{color:var(--text-mid);margin-bottom:1.2rem;line-height:1.85;}
+.about-features{display:flex;flex-direction:column;gap:12px;margin-top:1.5rem;}
+.about-feature{display:flex;align-items:flex-start;gap:12px;}
+.feature-icon{width:36px;height:36px;flex-shrink:0;background:var(--teal-50);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.feature-icon svg{width:18px;height:18px;}
+.feature-text{font-size:14px;color:var(--text-mid);line-height:1.6;}
+.feature-text strong{color:var(--teal-700);display:block;font-weight:600;margin-bottom:2px;}
+
+/* FOUNDER */
+#founder{background:var(--off-white);}
+.founder-grid{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:center;}
+.founder-photo-wrap{position:relative;}
+.founder-photo-frame{width:100%;aspect-ratio:1;border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--teal-700),var(--teal-500));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.founder-initials{font-family:var(--font-display);font-size:5rem;font-weight:900;color:rgba(255,255,255,0.9);position:relative;z-index:1;}
+.founder-photo-frame::before{content:'';position:absolute;bottom:-30px;right:-30px;width:160px;height:160px;background:rgba(58,174,155,0.2);border-radius:50%;}
+.founder-photo-frame::after{content:'';position:absolute;top:-20px;left:-20px;width:100px;height:100px;background:rgba(94,209,124,0.15);border-radius:50%;}
+.founder-badge{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--teal-400);color:#fff;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:0.05em;white-space:nowrap;box-shadow:0 6px 20px rgba(42,145,128,0.4);}
+.founder-content .section-title{margin-bottom:0.5rem;}
+.founder-role{font-size:14px;font-weight:600;color:var(--teal-500);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;}
+.founder-bio{color:var(--text-mid);line-height:1.85;margin-bottom:1.5rem;}
+.founder-quote{background:#fff;border-left:4px solid var(--teal-400);border-radius:0 var(--radius) var(--radius) 0;padding:1.25rem 1.5rem;margin:1.5rem 0;font-style:italic;color:var(--teal-700);font-size:15px;line-height:1.7;}
+.founder-socials{display:flex;gap:12px;margin-top:1.5rem;}
+.founder-social-link{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:8px;border:1px solid var(--border);font-size:13px;font-weight:600;color:var(--teal-700);text-decoration:none;transition:border-color 0.2s,background 0.2s;}
+.founder-social-link:hover{border-color:var(--teal-400);background:var(--teal-50);}
+.founder-social-link svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;}
+.founder-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+/* VMV */
+#vmv{background:#fff;}
+.vmv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.vmv-card{background:#fff;border-radius:var(--radius-lg);padding:2.5rem 2rem;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;}
+.vmv-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);}
+.vmv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal-400),var(--green-400));}
+.vmv-icon{width:56px;height:56px;background:var(--teal-50);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
+.vmv-icon svg{width:28px;height:28px;stroke:var(--teal-600);fill:none;stroke-width:1.8;}
+.vmv-label{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-500);margin-bottom:0.5rem;}
+.vmv-title{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--teal-900);margin-bottom:1rem;}
+.vmv-text{font-size:14px;color:var(--text-muted);line-height:1.8;}
+.values-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.5rem;}
+.value-pill{text-align:center;padding:1.5rem 1rem;background:var(--off-white);border-radius:var(--radius);border:1px solid var(--border);transition:border-color 0.2s,transform 0.2s;}
+.value-pill:hover{border-color:var(--teal-400);transform:translateY(-4px);}
+.value-icon-wrap{width:48px;height:48px;background:linear-gradient(135deg,var(--teal-50),#e8f8f4);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;}
+.value-icon-wrap svg{width:22px;height:22px;stroke:var(--teal-600);fill:none;stroke-width:1.8;}
+.value-name{font-size:13px;font-weight:700;color:var(--teal-800);margin-bottom:6px;letter-spacing:0.03em;}
+.value-desc{font-size:11px;color:var(--text-muted);line-height:1.6;}
+
+/* DELIVERY */
+#delivery{background:var(--teal-900);}
+#delivery .section-title{color:#fff;}
+#delivery .section-eyebrow{color:var(--teal-300);}
+#delivery .section-sub{color:var(--teal-100);}
+.delivery-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:1rem;}
+.delivery-step{position:relative;padding:2rem 1.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(58,174,155,0.2);border-radius:var(--radius-lg);transition:background 0.25s,border-color 0.25s;overflow:hidden;}
+.delivery-step:hover{background:rgba(58,174,155,0.1);border-color:rgba(58,174,155,0.4);}
+.step-num{font-family:var(--font-display);font-size:4rem;font-weight:900;color:rgba(58,174,155,0.12);line-height:1;position:absolute;top:1rem;right:1.2rem;}
+.step-badge{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--teal-500);border-radius:8px;font-size:13px;font-weight:700;color:#fff;margin-bottom:1rem;}
+.step-title{font-weight:700;font-size:14px;color:var(--teal-100);margin-bottom:8px;line-height:1.3;}
+.step-desc{font-size:13px;color:var(--teal-200);line-height:1.65;}
+.delivery-steps-row2{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem;}
+
+/* SEGMENTS */
+#segments{background:var(--off-white);}
+.segments-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
+.seg-card{border-radius:var(--radius);border:1px solid var(--border);padding:1.5rem 1.25rem;position:relative;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;background:#fff;cursor:pointer;}
+.seg-card:hover{transform:translateY(-5px);box-shadow:0 12px 35px rgba(10,46,40,0.1);border-color:var(--teal-300);}
+.seg-card-accent{position:absolute;top:0;left:0;width:4px;height:100%;}
+.seg-card-industry{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+.seg-card-name{font-size:15px;font-weight:700;color:var(--teal-900);margin-bottom:8px;}
+.seg-card-brand{display:inline-block;font-size:11px;font-weight:600;color:var(--teal-600);background:var(--teal-50);border-radius:100px;padding:3px 10px;letter-spacing:0.04em;}
+.seg-card-cta{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--teal-500);font-weight:600;margin-top:10px;letter-spacing:0.02em;}
+.seg-card-cta svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5;}
+
+/* PRODUCTS */
+#products{background:#fff;}
+.products-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.product-card{background:var(--off-white);border-radius:var(--radius-lg);padding:2.5rem;border:1px solid var(--border);display:flex;gap:2rem;align-items:flex-start;transition:transform 0.25s,box-shadow 0.25s;}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);}
+.product-icon-wrap{width:72px;height:72px;flex-shrink:0;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;}
+.product-icon-wrap.green{background:linear-gradient(135deg,#d4f5e2,#a8e6c2);}
+.product-icon-wrap.blue{background:linear-gradient(135deg,#d5e9ff,#b0d4ff);}
+.product-segment{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-500);margin-bottom:4px;}
+.product-name{font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--teal-900);margin-bottom:8px;}
+.product-desc{font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:1rem;}
+.product-features{display:flex;flex-direction:column;gap:6px;margin-bottom:1rem;}
+.product-feature-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mid);}
+.product-feature-item::before{content:'';width:6px;height:6px;background:var(--green-400);border-radius:50%;flex-shrink:0;}
+.product-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;background:var(--teal-50);color:var(--teal-700);border-radius:100px;padding:4px 12px;border:1px solid rgba(26,83,73,0.12);}
+.product-badge-live{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;background:#d4f5e2;color:#1a7a3a;border-radius:100px;padding:3px 10px;margin-bottom:8px;letter-spacing:0.04em;}
+.product-badge-live::before{content:'';width:6px;height:6px;background:#2fa84f;border-radius:50%;animation:pulse 2s infinite;}
+.product-icon-wrap img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* CAREERS */
+#careers{background:var(--teal-900);}
+#careers .section-title{color:#fff;}
+#careers .section-eyebrow{color:var(--teal-300);}
+#careers .section-sub{color:var(--teal-100);}
+.careers-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.careers-culture{display:flex;flex-direction:column;gap:1.5rem;}
+.culture-item{display:flex;align-items:flex-start;gap:14px;padding:1.25rem;background:rgba(255,255,255,0.04);border:1px solid rgba(58,174,155,0.15);border-radius:var(--radius);}
+.culture-icon{width:42px;height:42px;flex-shrink:0;background:rgba(58,174,155,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.culture-icon svg{width:20px;height:20px;stroke:var(--teal-300);fill:none;stroke-width:1.8;}
+.culture-title{font-size:14px;font-weight:700;color:var(--teal-100);margin-bottom:4px;}
+.culture-desc{font-size:13px;color:var(--teal-200);line-height:1.6;}
+.careers-openings{display:flex;flex-direction:column;gap:1rem;}
+.career-card{background:rgba(255,255,255,0.05);border:1px solid rgba(58,174,155,0.2);border-radius:var(--radius);padding:1.5rem;transition:background 0.2s,border-color 0.2s;}
+.career-card:hover{background:rgba(58,174,155,0.1);border-color:rgba(58,174,155,0.35);}
+.career-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:10px;}
+.career-title{font-size:15px;font-weight:700;color:#fff;}
+.career-badge{font-size:10px;font-weight:700;padding:4px 10px;border-radius:100px;letter-spacing:0.06em;flex-shrink:0;}
+.career-badge.open{background:rgba(47,168,79,0.2);color:#5ed17c;border:1px solid rgba(94,209,124,0.3);}
+.career-badge.future{background:rgba(201,168,76,0.15);color:#e0ba5a;border:1px solid rgba(201,168,76,0.25);}
+.career-meta{display:flex;gap:1rem;margin-bottom:8px;}
+.career-meta-item{font-size:11px;color:var(--teal-300);font-weight:600;letter-spacing:0.04em;}
+.career-desc{font-size:13px;color:var(--teal-200);line-height:1.6;}
+.career-apply-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;font-weight:700;color:var(--teal-300);text-decoration:none;letter-spacing:0.04em;}
+.career-apply-link:hover{color:var(--teal-200);}
+.careers-note{margin-top:2rem;padding:1.5rem;background:rgba(58,174,155,0.08);border:1px solid rgba(58,174,155,0.2);border-radius:var(--radius);font-size:13px;color:var(--teal-100);line-height:1.7;}
+
+/* CONTACT */
+#contact{background:linear-gradient(135deg,var(--teal-800),var(--teal-900));color:#fff;}
+#contact .section-title{color:#fff;}
+#contact .section-eyebrow{color:var(--teal-300);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem;}
+.contact-item{display:flex;align-items:flex-start;gap:14px;}
+.contact-icon{width:44px;height:44px;flex-shrink:0;background:rgba(58,174,155,0.15);border:1px solid rgba(58,174,155,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.contact-icon svg{width:20px;height:20px;stroke:var(--teal-300);fill:none;stroke-width:1.8;}
+.contact-item-label{font-size:11px;color:var(--teal-300);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:3px;}
+.contact-item-val{font-size:15px;color:var(--teal-100);}
+.contact-item-val a{color:var(--teal-100);text-decoration:none;}
+.contact-item-val a:hover{color:var(--teal-200);}
+.contact-form{display:flex;flex-direction:column;gap:1rem;}
+
+/* FOOTER */
+footer{background:var(--teal-900);border-top:1px solid rgba(58,174,155,0.15);padding:3rem 2rem 2rem;}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:1rem;}
+.footer-logo-circle{width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;}
+.footer-logo-circle img{width:100%;height:100%;object-fit:contain;}
+.footer-logo-name{font-family:var(--font-display);font-size:16px;font-weight:700;color:#fff;}
+.footer-logo-sub{font-size:10px;color:var(--teal-300);letter-spacing:0.06em;}
+.footer-tagline{font-size:13px;color:var(--teal-200);line-height:1.7;max-width:280px;margin-bottom:1.5rem;}
+.footer-social{display:flex;gap:10px;}
+.social-btn{width:36px;height:36px;background:rgba(58,174,155,0.12);border:1px solid rgba(58,174,155,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;text-decoration:none;}
+.social-btn:hover{background:rgba(58,174,155,0.25);}
+.social-btn svg{width:16px;height:16px;stroke:var(--teal-200);fill:none;stroke-width:1.8;}
+.footer-col-title{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-300);margin-bottom:1rem;}
+.footer-links{display:flex;flex-direction:column;gap:8px;}
+.footer-links a,.footer-links span{font-size:13px;color:var(--teal-100);text-decoration:none;transition:color 0.2s;cursor:pointer;}
+.footer-links a:hover,.footer-links span:hover{color:var(--teal-300);}
+.footer-bottom{max-width:1200px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(58,174,155,0.12);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-bottom-text{font-size:12px;color:var(--teal-300);}
+.footer-bottom-links{display:flex;gap:1.5rem;}
+.footer-bottom-links span{font-size:12px;color:var(--teal-300);cursor:pointer;transition:color 0.2s;}
+.footer-bottom-links span:hover{color:var(--teal-200);}
+
+/* MODAL SYSTEM */
+.modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(5,20,18,0.85);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:1.5rem;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:#fff;border-radius:var(--radius-lg);max-width:680px;width:100%;max-height:88vh;overflow-y:auto;position:relative;animation:modalIn 0.3s ease;}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(0.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-close{position:sticky;top:0;display:flex;justify-content:flex-end;padding:1rem 1rem 0;background:#fff;z-index:10;}
+.modal-close-btn{width:36px;height:36px;background:var(--off-white);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;flex-shrink:0;}
+.modal-close-btn:hover{background:var(--teal-50);}
+.modal-close-btn svg{width:16px;height:16px;stroke:var(--text-muted);fill:none;stroke-width:2;}
+.modal-header{padding:0 2rem 1.5rem;}
+.modal-header-inner{display:flex;align-items:flex-start;gap:1.25rem;}
+.modal-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;}
+.modal-industry-badge{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-500);margin-bottom:4px;}
+.modal-brand-name{font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--teal-900);line-height:1.1;margin-bottom:6px;}
+.modal-tagline{font-size:13px;color:var(--text-muted);font-style:italic;}
+.modal-status{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 12px;border-radius:100px;margin-top:8px;letter-spacing:0.04em;}
+.modal-status.live{background:#d4f5e2;color:#1a7a3a;}
+.modal-status.live::before{content:'';width:6px;height:6px;background:#2fa84f;border-radius:50%;animation:pulse 2s infinite;}
+.modal-status.dev{background:#fef3cd;color:#7a5f00;}
+.modal-status.dev::before{content:'';width:6px;height:6px;background:#c9a84c;border-radius:50%;}
+.modal-body{padding:0 2rem 2rem;}
+.modal-section-label{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-600);margin:1.25rem 0 0.6rem;}
+.modal-overview{font-size:14px;color:var(--text-mid);line-height:1.8;}
+.modal-features{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.modal-feature-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-mid);padding:8px 10px;background:var(--off-white);border-radius:8px;border:1px solid var(--border);}
+.modal-feature-item::before{content:'✓';font-weight:900;color:var(--teal-500);flex-shrink:0;font-size:12px;margin-top:1px;}
+.modal-divider{height:1px;background:var(--border);margin:1.25rem 0;}
+.modal-meta-row{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.modal-meta-item{display:flex;flex-direction:column;gap:2px;}
+.modal-meta-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);}
+.modal-meta-val{font-size:13px;font-weight:600;color:var(--teal-700);}
+.modal-cta{display:flex;gap:1rem;margin-top:1.5rem;}
+.modal-btn-primary{background:var(--teal-400);color:#fff;padding:11px 24px;border-radius:9px;font-size:14px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s;display:inline-block;}
+.modal-btn-primary:hover{background:var(--teal-300);}
+.modal-btn-outline{background:transparent;color:var(--teal-600);padding:11px 24px;border-radius:9px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid var(--border);cursor:pointer;transition:border-color 0.2s;}
+.modal-btn-outline:hover{border-color:var(--teal-400);}
+
+/* LEGAL MODALS */
+.legal-modal-box{max-width:780px;}
+.legal-content{padding:0 2rem 2rem;}
+.legal-title{font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--teal-900);margin-bottom:0.25rem;}
+.legal-effective{font-size:12px;color:var(--text-muted);margin-bottom:1.5rem;}
+.legal-section-title{font-size:15px;font-weight:700;color:var(--teal-800);margin:1.5rem 0 0.5rem;}
+.legal-text{font-size:13px;color:var(--text-mid);line-height:1.8;margin-bottom:0.75rem;}
+.legal-list{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:0.75rem;}
+.legal-list li{font-size:13px;color:var(--text-mid);padding-left:16px;position:relative;line-height:1.7;}
+.legal-list li::before{content:'·';position:absolute;left:0;color:var(--teal-500);font-weight:900;}
+
+/* FLOATING BUTTONS */
+#whatsapp-btn{position:fixed;bottom:2rem;right:2rem;z-index:900;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;}
+#whatsapp-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+#whatsapp-btn svg{width:28px;height:28px;fill:#fff;}
+.whatsapp-tooltip{position:absolute;right:68px;background:var(--teal-900);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s;}
+#whatsapp-btn:hover .whatsapp-tooltip{opacity:1;}
+#back-to-top{position:fixed;bottom:2rem;left:2rem;z-index:900;width:44px;height:44px;background:var(--teal-700);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;opacity:0;pointer-events:none;transition:opacity 0.3s,transform 0.2s;}
+#back-to-top.visible{opacity:1;pointer-events:auto;}
+#back-to-top:hover{transform:translateY(-3px);}
+#back-to-top svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5;}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-visual{display:none;}
+  .about-grid,.founder-grid,.contact-grid,.careers-grid{grid-template-columns:1fr;}
+  .vmv-grid{grid-template-columns:1fr;}
+  .values-grid{grid-template-columns:repeat(2,1fr);}
+  .delivery-steps,.delivery-steps-row2{grid-template-columns:repeat(2,1fr);}
+  .segments-grid{grid-template-columns:repeat(2,1fr);}
+  .products-grid{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .modal-features{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  section{padding:70px 1.25rem;}
+  .segments-grid{grid-template-columns:1fr;}
+  .delivery-steps,.delivery-steps-row2{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+  .values-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-stats{flex-wrap:wrap;gap:1.2rem;}
+  .modal-box,.legal-modal-box{margin:0.5rem;}
+  .modal-meta-row{flex-direction:column;gap:1rem;}
+}
 </style>
 </head>
 <body>
 
+<div id="scroll-progress"></div>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner">
+  <div class="cookie-text">
+    We use cookies to enhance your experience and analyse site traffic. By clicking "Accept", you consent to our use of cookies in accordance with our <span onclick="openModal('cookie-modal')" style="color:var(--teal-300);cursor:pointer;text-decoration:underline;">Cookie Policy</span> and South Africa's POPIA regulations.
+  </div>
+  <div class="cookie-actions">
+    <button class="btn-cookie-decline" onclick="dismissCookie()">Decline</button>
+    <button class="btn-cookie-accept" onclick="acceptCookie()">Accept All</button>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-brand">
-    <div class="nav-logo-circle">
-      <img src="scholarstix.png" alt="Scholarstix Unlimited Inc. logo">
-    </div>
+    <div class="nav-logo-circle"><img src="scholarstix.png" alt="Scholarstix Unlimited Inc. logo"/></div>
     <div class="nav-brand-text">
       <span class="nav-brand-name">Scholarstix Unlimited Inc.</span>
       <span class="nav-brand-tag">Innovating Efficiency · Improving Productivity</span>
     </div>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#vmv">Vision & Values</a></li>
-    <li><a href="#delivery">How We Deliver</a></li>
-    <li><a href="#segments">Our Segments</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#vmv">Values</a></li>
+    <li><a href="#delivery">Process</a></li>
+    <li><a href="#segments">Segments</a></li>
     <li><a href="#products">Products</a></li>
+    <li><a href="#careers">Careers</a></li>
     <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
   </ul>
-  <div class="nav-hamburger" onclick="toggleMenu()">
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -910,16 +469,10 @@
   <div class="hero-bg-pattern"></div>
   <div class="hero-grid-lines"></div>
   <div class="hero-inner">
-    <div class="hero-left fade-in">
+    <div class="fade-in">
       <div class="hero-eyebrow">AI-Powered Operating Systems</div>
-      <h1 class="hero-title">
-        Replace Operational<br/>
-        <span class="accent">Chaos</span> with<br/>
-        <span class="accent2">Control</span>
-      </h1>
-      <p class="hero-desc">
-        Scholarstix Unlimited Inc. designs, develops and integrates cutting-edge AI technology solutions that drive efficiency, productivity and sustainability across African SMMEs — and beyond.
-      </p>
+      <h1 class="hero-title">Replace Operational<br/><span class="accent">Chaos</span> with<br/><span class="accent2">Control</span></h1>
+      <p class="hero-desc">Scholarstix Unlimited Inc. designs, develops and integrates cutting-edge AI technology solutions that drive efficiency, productivity and sustainability across African SMMEs — and beyond.</p>
       <div class="hero-actions">
         <a href="#segments" class="btn-primary">Explore Our Solutions →</a>
         <a href="#about" class="btn-outline">Learn More</a>
@@ -927,20 +480,20 @@
       <div class="hero-stats">
         <div class="hero-stat"><div class="num">12</div><div class="lbl">Industry Segments</div></div>
         <div class="hero-stat"><div class="num">2</div><div class="lbl">Live Android Apps</div></div>
-        <div class="hero-stat"><div class="num">1</div><div class="lbl">Bold Vision</div></div>
+        <div class="hero-stat"><div class="num">7</div><div class="lbl">Delivery Steps</div></div>
       </div>
     </div>
     <div class="hero-visual fade-in">
       <div class="hero-card">
         <div class="hero-card-header">Active Business Segments</div>
         <div class="segment-list">
-          <div class="segment-item"><span class="seg-dot green"></span>Healthcare <span class="seg-brand">IntelliMed</span></div>
-          <div class="segment-item"><span class="seg-dot blue"></span>Supermarket Retail <span class="seg-brand">SuperSentrix</span></div>
-          <div class="segment-item"><span class="seg-dot gold"></span>Events Management <span class="seg-brand">Eventrix</span></div>
-          <div class="segment-item"><span class="seg-dot teal"></span>Funeral Services <span class="seg-brand">MemoriX</span></div>
-          <div class="segment-item"><span class="seg-dot green"></span>Transport Logistics <span class="seg-brand">NovaRoute</span></div>
-          <div class="segment-item"><span class="seg-dot blue"></span>Manufacturing <span class="seg-brand">Micro-Pulse</span></div>
-          <div class="segment-item"><span class="seg-dot gold"></span>Education <span class="seg-brand">Ecco-Roots</span></div>
+          <div class="segment-item"><span class="seg-dot green"></span>Healthcare<span class="seg-brand">IntelliMed</span></div>
+          <div class="segment-item"><span class="seg-dot blue"></span>Supermarket Retail<span class="seg-brand">SuperSentrix</span></div>
+          <div class="segment-item"><span class="seg-dot gold"></span>Events Management<span class="seg-brand">Eventrix</span></div>
+          <div class="segment-item"><span class="seg-dot teal"></span>Funeral Services<span class="seg-brand">MemoriX</span></div>
+          <div class="segment-item"><span class="seg-dot green"></span>Transport Logistics<span class="seg-brand">NovaRoute</span></div>
+          <div class="segment-item"><span class="seg-dot blue"></span>Manufacturing<span class="seg-brand">Micro-Pulse</span></div>
+          <div class="segment-item"><span class="seg-dot gold"></span>Education<span class="seg-brand">Ecco-Roots</span></div>
         </div>
       </div>
     </div>
@@ -954,41 +507,31 @@
     <div class="about-grid">
       <div class="about-img-wrap fade-in">
         <div class="about-visual">
-          <div class="about-visual-quote">"Innovating Efficiency, Improving Productivity — One Innovation at a Time."</div>
-          <div class="about-visual-tag">Scholarstix Unlimited Inc. · Est. Africa</div>
+          <div class="about-visual-quote">"Innovating Efficiency, Enhancing Productivity — One Innovation at a Time."</div>
+          <div class="about-visual-tag">Scholarstix Unlimited Inc. · Meredale, Johannesburg</div>
         </div>
         <div class="about-accent-card">
-          <div class="about-accent-num">7</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-top:4px;">Delivery Steps</div>
+          <div class="about-accent-num">12</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-top:4px;">Industry Verticals</div>
         </div>
       </div>
       <div class="about-content fade-in">
         <div class="section-eyebrow">Who We Are</div>
         <h2 class="section-title">Technology That Works as Hard as You Do</h2>
         <div class="section-divider"></div>
-        <p>
-          Scholarstix Unlimited Inc. is a forward-thinking technology company that innovates, designs, and integrates bespoke solutions for improved operational efficiency and productivity across diverse industries.
-        </p>
-        <p>
-          We specialize in building AI-powered operating systems tailored specifically for African SMMEs — empowering small and medium businesses with the same technological firepower previously reserved for large enterprises.
-        </p>
+        <p>Scholarstix Unlimited Inc. is a forward-thinking technology company headquartered in Meredale, Johannesburg. We innovate, design and integrate bespoke AI-powered solutions that drive operational efficiency and productivity across diverse industries in Africa and beyond.</p>
+        <p>We specialize in building AI-powered operating systems tailored specifically for African SMMEs — empowering small and medium businesses with the same technological firepower previously reserved for large enterprises.</p>
         <div class="about-features">
           <div class="about-feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <div class="feature-text"><strong>Vertical-Specific Platforms</strong>Industry-aware AI built for your exact business context, not generic software.</div>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div class="feature-text"><strong>Vertical-Specific Platforms</strong>Industry-aware AI built for your exact business context — not generic off-the-shelf software.</div>
           </div>
           <div class="about-feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <div class="feature-text"><strong>Decision-Driven AI Integration</strong>Practical intelligence embedded directly into daily operational workflows.</div>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="feature-text"><strong>Decision-Driven AI Integration</strong>Practical intelligence embedded directly into your daily operational workflows.</div>
           </div>
           <div class="about-feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <div class="feature-text"><strong>Partnership-First Culture</strong>We grow with our clients — from deployment through scale and beyond.</div>
           </div>
         </div>
@@ -997,7 +540,43 @@
   </div>
 </section>
 
-<!-- VISION MISSION VALUES -->
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-photo-wrap fade-in">
+        <div class="founder-photo-frame">
+          <img src="teboho-moloi.jpg" alt="Teboho Moloi, Founder & CEO of Scholarstix Unlimited Inc." style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-lg);">
+        </div>
+        <div class="founder-badge">Founder & CEO</div>
+      </div>
+      <div class="fade-in">
+        <div class="section-eyebrow">Leadership</div>
+        <h2 class="section-title">Teboho Moloi</h2>
+        <div class="founder-role">Founder & Chief Executive Officer — Scholarstix Unlimited Inc.</div>
+        <p class="founder-bio">Teboho Moloi is the visionary founder behind Scholarstix Unlimited Inc., bringing a strong foundation in operational systems thinking, technology integration and strategic innovation. With a deep understanding of the African SMME landscape, Teboho identified a critical gap — that small and medium businesses were being left behind by expensive, complex enterprise software designed for large corporations.</p>
+        <p class="founder-bio">His response was Scholarstix: a company built from the ground up to design, develop and deploy AI-powered operating systems that are practical, affordable and deeply attuned to the realities of running a business in Africa. Each of the 12 industry segments reflects Teboho's hands-on research and insight into exactly what those business owners need to thrive.</p>
+        <div class="founder-quote">"My goal is simple — to give every African SMME owner the same operational intelligence that Fortune 500 companies take for granted. Africa doesn't need watered-down solutions. It needs systems built for Africa, by Africa."</div>
+        <div class="founder-socials">
+          <a href="https://www.linkedin.com/in/teboho-moloi-scholarstix" class="founder-social-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://x.com/ScholarstixU" class="founder-social-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            Twitter / X
+          </a>
+          <a href="mailto:info@scholarstix.com" class="founder-social-link">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VMV -->
 <section id="vmv">
   <div class="container">
     <div class="section-header fade-in">
@@ -1007,64 +586,47 @@
     </div>
     <div class="vmv-grid">
       <div class="vmv-card fade-in">
-        <div class="vmv-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
-        </div>
+        <div class="vmv-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></div>
         <div class="vmv-label">Our Vision</div>
         <div class="vmv-title">Transform Operational Excellence</div>
         <div class="vmv-text">To transform operational excellence in Africa and beyond — one innovation at a time. We see a continent where every SMME has access to world-class AI-powered systems.</div>
       </div>
       <div class="vmv-card fade-in">
-        <div class="vmv-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
+        <div class="vmv-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
         <div class="vmv-label">Our Mission</div>
         <div class="vmv-title">Design. Develop. Integrate.</div>
         <div class="vmv-text">To design, develop and integrate innovative technology solutions that drive operational efficiency, productivity and sustainability for our clients — while fostering a culture of excellence, integrity and customer delight.</div>
       </div>
       <div class="vmv-card fade-in">
-        <div class="vmv-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
+        <div class="vmv-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
         <div class="vmv-label">Our Promise</div>
         <div class="vmv-title">Rooted in Core Values</div>
         <div class="vmv-text">Innovation, Excellence, Integrity, Customer-Centricity and Collaboration aren't just words at Scholarstix — they are the operating principles behind every line of code we write.</div>
       </div>
     </div>
-
     <div class="values-grid">
       <div class="value-pill fade-in">
-        <div class="value-icon-wrap">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </div>
+        <div class="value-icon-wrap"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
         <div class="value-name">Innovation</div>
         <div class="value-desc">Embracing creativity to drive growth and excellence</div>
       </div>
       <div class="value-pill fade-in">
-        <div class="value-icon-wrap">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
+        <div class="value-icon-wrap"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
         <div class="value-name">Excellence</div>
         <div class="value-desc">Exceptional quality, service and results in all we do</div>
       </div>
       <div class="value-pill fade-in">
-        <div class="value-icon-wrap">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
+        <div class="value-icon-wrap"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="value-name">Integrity</div>
         <div class="value-desc">Ethics, transparency and accountability always</div>
       </div>
       <div class="value-pill fade-in">
-        <div class="value-icon-wrap">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
+        <div class="value-icon-wrap"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
         <div class="value-name">Customer-Centricity</div>
         <div class="value-desc">Clients at the forefront of every decision</div>
       </div>
       <div class="value-pill fade-in">
-        <div class="value-icon-wrap">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
+        <div class="value-icon-wrap"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="var(--teal-600)" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div class="value-name">Collaboration</div>
         <div class="value-desc">Teamwork, open communication and mutual respect</div>
       </div>
@@ -1072,59 +634,24 @@
   </div>
 </section>
 
-<!-- HOW WE DELIVER -->
+<!-- DELIVERY -->
 <section id="delivery">
   <div class="container">
     <div class="section-header fade-in">
       <div class="section-eyebrow">Our Process</div>
       <h2 class="section-title">How We Deliver</h2>
-      <p class="section-sub" style="color:var(--teal-100)">A rigorous, research-backed 7-step methodology that transforms market opportunity into world-class deployed technology.</p>
+      <p class="section-sub">A rigorous, research-backed 7-step methodology that transforms market opportunity into world-class deployed technology.</p>
     </div>
     <div class="delivery-steps">
-      <div class="delivery-step fade-in">
-        <div class="step-num">01</div>
-        <div class="step-badge">1</div>
-        <div class="step-title">Market & Industry Scanning</div>
-        <div class="step-desc">Deep intelligence gathering across target industries to understand current landscapes, player dynamics and emerging trends.</div>
-      </div>
-      <div class="delivery-step fade-in">
-        <div class="step-num">02</div>
-        <div class="step-badge">2</div>
-        <div class="step-title">Opportunity & Gap Identification</div>
-        <div class="step-desc">Pinpointing underserved gaps where technology can create decisive competitive advantage for SMMEs.</div>
-      </div>
-      <div class="delivery-step fade-in">
-        <div class="step-num">03</div>
-        <div class="step-badge">3</div>
-        <div class="step-title">Extensive Research</div>
-        <div class="step-desc">Opportunity and insight-based research that shapes product strategy, pricing and go-to-market approach.</div>
-      </div>
-      <div class="delivery-step fade-in">
-        <div class="step-num">04</div>
-        <div class="step-badge">4</div>
-        <div class="step-title">Develop & Test</div>
-        <div class="step-desc">Agile development cycles with rigorous testing protocols ensuring reliability, security and performance.</div>
-      </div>
+      <div class="delivery-step fade-in"><div class="step-num">01</div><div class="step-badge">1</div><div class="step-title">Market & Industry Scanning</div><div class="step-desc">Deep intelligence gathering across target industries to understand current landscapes, player dynamics and emerging trends.</div></div>
+      <div class="delivery-step fade-in"><div class="step-num">02</div><div class="step-badge">2</div><div class="step-title">Opportunity & Gap Identification</div><div class="step-desc">Pinpointing underserved gaps where technology can create decisive competitive advantage for SMMEs.</div></div>
+      <div class="delivery-step fade-in"><div class="step-num">03</div><div class="step-badge">3</div><div class="step-title">Extensive Research</div><div class="step-desc">Opportunity and insight-based research that shapes product strategy, pricing and go-to-market approach.</div></div>
+      <div class="delivery-step fade-in"><div class="step-num">04</div><div class="step-badge">4</div><div class="step-title">Develop & Test</div><div class="step-desc">Agile development cycles with rigorous testing protocols ensuring reliability, security and performance.</div></div>
     </div>
     <div class="delivery-steps-row2">
-      <div class="delivery-step fade-in">
-        <div class="step-num">05</div>
-        <div class="step-badge">5</div>
-        <div class="step-title">Solution Packaging, Deployment & Consultations</div>
-        <div class="step-desc">Tailored deployment plans with hands-on consultation to ensure smooth client onboarding and adoption.</div>
-      </div>
-      <div class="delivery-step fade-in">
-        <div class="step-num">06</div>
-        <div class="step-badge">6</div>
-        <div class="step-title">Scaling & Commercialization</div>
-        <div class="step-desc">Growth-stage strategy encompassing pricing, distribution partnerships and market expansion into new geographies.</div>
-      </div>
-      <div class="delivery-step fade-in">
-        <div class="step-num">07</div>
-        <div class="step-badge">7</div>
-        <div class="step-title">Maintenance & Continuous Updates</div>
-        <div class="step-desc">Ongoing platform maintenance, feature releases and proactive support ensuring clients always operate at peak capability.</div>
-      </div>
+      <div class="delivery-step fade-in"><div class="step-num">05</div><div class="step-badge">5</div><div class="step-title">Packaging, Deployment & Consultations</div><div class="step-desc">Tailored deployment plans with hands-on consultation to ensure smooth client onboarding and adoption.</div></div>
+      <div class="delivery-step fade-in"><div class="step-num">06</div><div class="step-badge">6</div><div class="step-title">Scaling & Commercialization</div><div class="step-desc">Growth-stage strategy encompassing pricing, distribution partnerships and market expansion into new geographies.</div></div>
+      <div class="delivery-step fade-in"><div class="step-num">07</div><div class="step-badge">7</div><div class="step-title">Maintenance & Continuous Updates</div><div class="step-desc">Ongoing platform maintenance, feature releases and proactive support ensuring clients always operate at peak capability.</div></div>
     </div>
   </div>
 </section>
@@ -1132,84 +659,24 @@
 <!-- SEGMENTS -->
 <section id="segments">
   <div class="container">
-    <div class="section-header segments-intro fade-in">
+    <div class="section-header fade-in">
       <div class="section-eyebrow">Our Target Markets</div>
       <h2 class="section-title">Industry Business Segments</h2>
-      <p class="section-sub">Scholarstix targets independent SMMEs through 12 purpose-built vertical platforms — each with its own brand identity, AI capabilities and operational focus.</p>
+      <p class="section-sub">Scholarstix targets independent SMMEs through 12 purpose-built vertical platforms — each with its own brand identity, AI capabilities and operational focus. Click any card to learn more.</p>
     </div>
     <div class="segments-grid">
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:var(--green-400)"></div>
-        <div class="seg-card-industry">Healthcare</div>
-        <div class="seg-card-name">Medical Practice Management</div>
-        <div class="seg-card-brand">IntelliMed</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:var(--circuit-blue)"></div>
-        <div class="seg-card-industry">Supermarket Retail & Wholesale</div>
-        <div class="seg-card-name">POS & Inventory Intelligence</div>
-        <div class="seg-card-brand">SuperSentrix</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:var(--gold)"></div>
-        <div class="seg-card-industry">Events Management</div>
-        <div class="seg-card-name">End-to-End Event Operations</div>
-        <div class="seg-card-brand">Eventrix</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:var(--teal-400)"></div>
-        <div class="seg-card-industry">Funeral Homes & Services</div>
-        <div class="seg-card-name">Bereavement Service Management</div>
-        <div class="seg-card-brand">MemoriX</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:#e67e22"></div>
-        <div class="seg-card-industry">Liquor Trade</div>
-        <div class="seg-card-name">Liquor Retail Operations</div>
-        <div class="seg-card-brand">SipSpace</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:#c0392b"></div>
-        <div class="seg-card-industry">Pub & Meat Griller</div>
-        <div class="seg-card-name">F&B & Hospitality Management</div>
-        <div class="seg-card-brand">Fork & Flame</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:#8e44ad"></div>
-        <div class="seg-card-industry">Builders & Hardware</div>
-        <div class="seg-card-name">Hardware Store Intelligence</div>
-        <div class="seg-card-brand">Hammer-Time</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:#2c3e50"></div>
-        <div class="seg-card-industry">Auto Spares</div>
-        <div class="seg-card-name">Auto Parts & Workshop Ops</div>
-        <div class="seg-card-brand">Gear-Up</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:var(--teal-300)"></div>
-        <div class="seg-card-industry">Transport Logistics</div>
-        <div class="seg-card-name">Fleet & Route Optimization</div>
-        <div class="seg-card-brand">NovaRoute</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:var(--green-300)"></div>
-        <div class="seg-card-industry">Education</div>
-        <div class="seg-card-name">EdTech & Learning Management</div>
-        <div class="seg-card-brand">Ecco-Roots</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:#1abc9c"></div>
-        <div class="seg-card-industry">MRO (Maintenance, Repair & Overhaul)</div>
-        <div class="seg-card-name">Maintenance Operations System</div>
-        <div class="seg-card-brand">Relybex</div>
-      </div>
-      <div class="seg-card fade-in">
-        <div class="seg-card-accent" style="background:#e74c3c"></div>
-        <div class="seg-card-industry">Manufacturing Operations</div>
-        <div class="seg-card-name">Production & Factory Intelligence</div>
-        <div class="seg-card-brand">Micro-Pulse · UBOS</div>
-      </div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('intellimed')"><div class="seg-card-accent" style="background:#2fa84f"></div><div class="seg-card-industry">Healthcare</div><div class="seg-card-name">Medical Practice Management</div><div class="seg-card-brand">IntelliMed</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('supersentrix')"><div class="seg-card-accent" style="background:#2b7de9"></div><div class="seg-card-industry">Supermarket Retail & Wholesale</div><div class="seg-card-name">POS & Inventory Intelligence</div><div class="seg-card-brand">SuperSentrix</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('eventrix')"><div class="seg-card-accent" style="background:#c9a84c"></div><div class="seg-card-industry">Events Management</div><div class="seg-card-name">End-to-End Event Operations</div><div class="seg-card-brand">Eventrix</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('memorix')"><div class="seg-card-accent" style="background:#3aae9b"></div><div class="seg-card-industry">Funeral Homes & Services</div><div class="seg-card-name">Bereavement Service Management</div><div class="seg-card-brand">MemoriX</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('sipspace')"><div class="seg-card-accent" style="background:#e67e22"></div><div class="seg-card-industry">Liquor Trade</div><div class="seg-card-name">Liquor Retail Operations</div><div class="seg-card-brand">SipSpace</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('forkflame')"><div class="seg-card-accent" style="background:#c0392b"></div><div class="seg-card-industry">Pub & Meat Griller</div><div class="seg-card-name">F&B & Hospitality Management</div><div class="seg-card-brand">Fork & Flame</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('hammertime')"><div class="seg-card-accent" style="background:#8e44ad"></div><div class="seg-card-industry">Builders & Hardware</div><div class="seg-card-name">Hardware Store Intelligence</div><div class="seg-card-brand">Hammer-Time</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('gearup')"><div class="seg-card-accent" style="background:#2c3e50"></div><div class="seg-card-industry">Auto Spares</div><div class="seg-card-name">Auto Parts & Workshop Ops</div><div class="seg-card-brand">Gear-Up</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('novaroute')"><div class="seg-card-accent" style="background:#3aae9b"></div><div class="seg-card-industry">Transport Logistics</div><div class="seg-card-name">Fleet & Route Optimization</div><div class="seg-card-brand">NovaRoute</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('eccoroots')"><div class="seg-card-accent" style="background:#5ed17c"></div><div class="seg-card-industry">Education</div><div class="seg-card-name">EdTech & Learning Management</div><div class="seg-card-brand">Ecco-Roots</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('relybex')"><div class="seg-card-accent" style="background:#1abc9c"></div><div class="seg-card-industry">MRO (Maintenance, Repair & Overhaul)</div><div class="seg-card-name">Maintenance Operations System</div><div class="seg-card-brand">Relybex</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+      <div class="seg-card fade-in" onclick="openSegmentModal('micropulse')"><div class="seg-card-accent" style="background:#e74c3c"></div><div class="seg-card-industry">Manufacturing Operations</div><div class="seg-card-name">Production & Factory Intelligence</div><div class="seg-card-brand">Micro-Pulse · UBOS</div><div class="seg-card-cta">Learn more <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
     </div>
   </div>
 </section>
@@ -1220,31 +687,131 @@
     <div class="section-header fade-in">
       <div class="section-eyebrow">Live Products</div>
       <h2 class="section-title">Current Application Products</h2>
-      <p class="section-sub">AI-powered Android applications available now — engineered for Android 14+ smart devices and ready for deployment.</p>
+      <p class="section-sub">AI-powered Android applications available now — engineered for Android 14+ smart devices and ready for deployment across Africa.</p>
     </div>
     <div class="products-grid">
       <div class="product-card fade-in">
-        <div class="product-icon-wrap green">🛒</div>
+        <div class="product-icon-wrap green">
+          <img src="supersentrix-logo.png" alt="SuperSentrix logo" style="width:48px; height:48px; object-fit:contain;">
+        </div>
         <div>
+          <div class="product-badge-live">● Live Now</div>
           <div class="product-segment">From SuperSentrix</div>
           <div class="product-name">SuperSentrix POS</div>
-          <div class="product-desc">An AI-powered mobile Point-of-Sale Android application built for supermarkets and wholesale retailers. Intelligent inventory management, sales analytics and real-time reporting — all from your Android 14+ device.</div>
-          <span class="product-tag">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            Android 14+ · SuperSentrix
-          </span>
+          <div class="product-desc">An AI-powered mobile Point-of-Sale Android application purpose-built for supermarkets, spaza shops and wholesale retailers. Run your entire retail operation from a single Android 14+ device.</div>
+          <div class="product-features">
+            <div class="product-feature-item">Real-time sales & inventory tracking</div>
+            <div class="product-feature-item">AI-driven stock replenishment alerts</div>
+            <div class="product-feature-item">Multi-payment method support</div>
+            <div class="product-feature-item">Daily sales reports & analytics dashboard</div>
+            <div class="product-feature-item">Supplier order management</div>
+          </div>
+          <span class="product-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Android 14+ · SuperSentrix</span>
         </div>
       </div>
       <div class="product-card fade-in">
-        <div class="product-icon-wrap blue">🎟️</div>
+        <div class="product-icon-wrap blue">
+          <img src="eventrixgo-logo.png" alt="Eventrix-Go logo" style="width:48px; height:48px; object-fit:contain;">
+        </div>
         <div>
+          <div class="product-badge-live">● Live Now</div>
           <div class="product-segment">From Eventrix</div>
           <div class="product-name">Eventrix-Go</div>
-          <div class="product-desc">An AI-powered Events Management mobile Android application. Full event lifecycle management from planning and ticketing to vendor coordination and post-event analytics — purpose-built for event professionals.</div>
-          <span class="product-tag">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            Android 14+ · Eventrix
-          </span>
+          <div class="product-desc">An AI-powered Events Management mobile Android application. Full event lifecycle management from planning and ticketing through vendor coordination to post-event analytics — purpose-built for event professionals.</div>
+          <div class="product-features">
+            <div class="product-feature-item">End-to-end event planning & scheduling</div>
+            <div class="product-feature-item">Digital ticketing & guest list management</div>
+            <div class="product-feature-item">Vendor & supplier coordination</div>
+            <div class="product-feature-item">Budget tracking & financial reporting</div>
+            <div class="product-feature-item">Post-event analytics & insights</div>
+          </div>
+          <span class="product-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Android 14+ · Eventrix</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Join Our Team</div>
+      <h2 class="section-title">Build Africa's Tech Future With Us</h2>
+      <p class="section-sub">We're building something meaningful. If you're passionate about technology, innovation and making a real impact on African businesses — we want to hear from you.</p>
+    </div>
+    <div class="careers-grid">
+      <div class="careers-culture fade-in">
+        <div class="culture-item">
+          <div class="culture-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div><div class="culture-title">Innovation First</div><div class="culture-desc">We encourage bold thinking. Every team member has a voice in shaping our products and direction.</div></div>
+        </div>
+        <div class="culture-item">
+          <div class="culture-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="culture-title">Flexible & Remote-Friendly</div><div class="culture-desc">We believe great work happens when people have the freedom to do their best work, wherever they are.</div></div>
+        </div>
+        <div class="culture-item">
+          <div class="culture-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><div class="culture-title">Grow With Us</div><div class="culture-desc">As Scholarstix scales, our team scales with it. Early contributors become leaders of tomorrow.</div></div>
+        </div>
+        <div class="culture-item">
+          <div class="culture-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="culture-title">Purpose-Driven Work</div><div class="culture-desc">Every line of code, every feature and every sale directly impacts African business owners' livelihoods.</div></div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="careers-openings">
+          <div class="career-card">
+            <div class="career-card-top">
+              <div class="career-title">Android Mobile Developer</div>
+              <span class="career-badge open">Open</span>
+            </div>
+            <div class="career-meta">
+              <span class="career-meta-item">📍 Remote / Johannesburg</span>
+              <span class="career-meta-item">⏱ Part-time / Contract</span>
+            </div>
+            <div class="career-desc">We're looking for an Android developer (Java/Kotlin) experienced with Android 14+ to join the SuperSentrix and Eventrix-Go build teams. Firebase, REST APIs and a passion for clean UX essential.</div>
+            <a href="mailto:info@scholarstix.com?subject=Application: Android Mobile Developer" class="career-apply-link">Apply via Email →</a>
+          </div>
+          <div class="career-card">
+            <div class="career-card-top">
+              <div class="career-title">UI/UX Designer</div>
+              <span class="career-badge open">Open</span>
+            </div>
+            <div class="career-meta">
+              <span class="career-meta-item">📍 Remote</span>
+              <span class="career-meta-item">⏱ Freelance / Contract</span>
+            </div>
+            <div class="career-desc">Help shape the visual language of 12 industry-specific platforms. Figma expertise required. Experience designing for mobile-first African users is a strong advantage.</div>
+            <a href="mailto:info@scholarstix.com?subject=Application: UI/UX Designer" class="career-apply-link">Apply via Email →</a>
+          </div>
+          <div class="career-card">
+            <div class="career-card-top">
+              <div class="career-title">Sales & Business Development</div>
+              <span class="career-badge open">Open</span>
+            </div>
+            <div class="career-meta">
+              <span class="career-meta-item">📍 Johannesburg & surrounds</span>
+              <span class="career-meta-item">⏱ Commission-based</span>
+            </div>
+            <div class="career-desc">Help us bring Scholarstix solutions to SMMEs across Gauteng and beyond. Strong network in retail, healthcare or logistics is a major advantage. Uncapped commission structure.</div>
+            <a href="mailto:info@scholarstix.com?subject=Application: Business Development" class="career-apply-link">Apply via Email →</a>
+          </div>
+          <div class="career-card">
+            <div class="career-card-top">
+              <div class="career-title">AI/ML Engineer</div>
+              <span class="career-badge future">Future Role</span>
+            </div>
+            <div class="career-meta">
+              <span class="career-meta-item">📍 Remote</span>
+              <span class="career-meta-item">⏱ Full-time (Future)</span>
+            </div>
+            <div class="career-desc">We're building toward embedding deeper AI decision models into our platforms. If you're interested in joining when this role opens, send us your profile now so you're first in line.</div>
+            <a href="mailto:info@scholarstix.com?subject=Interest: Future AI/ML Role" class="career-apply-link">Register Interest →</a>
+          </div>
+        </div>
+        <div class="careers-note">
+          Don't see a role that fits? We're always open to exceptional talent. Send your CV and a short note about how you'd contribute to <a href="mailto:info@scholarstix.com" style="color:var(--teal-300);">info@scholarstix.com</a> with the subject line <em>"Open Application"</em>.
         </div>
       </div>
     </div>
@@ -1259,54 +826,29 @@
         <div class="section-eyebrow">Reach Out</div>
         <h2 class="section-title">Let's Build Something Together</h2>
         <div class="section-divider"></div>
-        <p style="color:var(--teal-100);margin-bottom:2.5rem;line-height:1.8;max-width:440px;">
-          Whether you're an SMME ready to transform your operations, a potential partner, or an investor — we'd love to hear from you. Reach out and let's start a conversation.
-        </p>
+        <p style="color:var(--teal-100);margin-bottom:2.5rem;line-height:1.8;max-width:440px;">Whether you're an SMME ready to transform your operations, a potential partner, or an investor — we'd love to hear from you.</p>
         <div class="contact-info">
           <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <div class="contact-item-label">Headquarters</div>
-              <div class="contact-item-val">Meredale, Johannesburg (Serving Africa & Beyond)</div>
-            </div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="contact-item-label">Headquarters</div><div class="contact-item-val">Meredale, Johannesburg (Serving Africa & Beyond)</div></div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <div class="contact-item-label">Email</div>
-              <div class="contact-item-val">info@scholarstix.com</div>
-            </div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="contact-item-label">Email</div><div class="contact-item-val"><a href="mailto:info@scholarstix.com">info@scholarstix.com</a></div></div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div>
-              <div class="contact-item-label">Website</div>
-              <div class="contact-item-val">www.scholarstix.com</div>
-            </div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div><div class="contact-item-label">Website</div><div class="contact-item-val">www.scholarstix.com</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div><div class="contact-item-label">WhatsApp</div><div class="contact-item-val"><a href="https://wa.me/+27605693546?text=Hi%20Scholarstix%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20solutions" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div></div>
           </div>
         </div>
       </div>
-
-      <div class="contact-form">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfbv0Eyz1zVxP4BYP4TLoabzKRavZH5XH9oOwH9e-KaerqLUA/viewform?embedded=true" 
-          width="100%" 
-          height="750" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0" 
-          title="Scholarstix contact form">
-          Loading…
-        </iframe>
-        <p style="font-size: 12px; color: var(--teal-200); text-align: center; margin-top: 1rem;">
-          We respect your privacy. Your information will not be shared.
-        </p>
+      <div class="contact-form fade-in">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbv0Eyz1zVxP4BYP4TLoabzKRavZH5XH9oOwH9e-KaerqLUA/viewform?embedded=true" width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0" title="Scholarstix contact form">Loading…</iframe>
+        <p style="font-size:12px;color:var(--teal-200);text-align:center;margin-top:1rem;">We respect your privacy. Your information will not be shared. See our <span onclick="openModal('privacy-modal')" style="cursor:pointer;text-decoration:underline;color:var(--teal-300);">Privacy Policy</span>.</p>
       </div>
     </div>
   </div>
@@ -1315,55 +857,38 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand-block">
+    <div>
       <div class="footer-logo">
-        <div class="footer-logo-circle">
-          <img src="scholarstix.png" alt="Scholarstix Unlimited Inc. logo">
-        </div>
-        <div>
-          <div class="footer-logo-name">Scholarstix Unlimited Inc.</div>
-          <div class="footer-logo-sub">Innovating Efficiency · Improving Productivity</div>
-        </div>
+        <div class="footer-logo-circle"><img src="scholarstix.png" alt="Scholarstix logo"/></div>
+        <div><div class="footer-logo-name">Scholarstix Unlimited Inc.</div><div class="footer-logo-sub">Innovating Efficiency · Improving Productivity</div></div>
       </div>
-      <p class="footer-tagline">
-        AI-powered operating systems that replace operational chaos with control — built for Africa's SMMEs and beyond.
-      </p>
+      <p class="footer-tagline">AI-powered operating systems that replace operational chaos with control — built for Africa's SMMEs and beyond. Meredale, Johannesburg.</p>
       <div class="footer-social">
-        <a href="www.linkedin.com/in/teboho-moloi-scholarstix" class="social-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="https://x.com/ScholarstixU" class="social-btn" title="Twitter/X" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/scholarstix_unlimitedinc/" class="social-btn" title="Instagram" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@scholarstixunlimitedinc" class="social-btn" title="TikTok" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v4a9 9 0 0 1-4-1v5a4 4 0 1 1-4-4v4z"/></svg>
-        </a>
-        <a href="mailto:info@scholarstix.com" class="social-btn" title="Email">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </a>
+        <a href="https://www.linkedin.com/in/teboho-moloi-scholarstix" class="social-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://x.com/ScholarstixU" class="social-btn" title="Twitter/X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+        <a href="https://www.instagram.com/scholarstix_unlimitedinc/" class="social-btn" title="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.tiktok.com/@scholarstixunlimitedinc" class="social-btn" title="TikTok" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+        <a href="mailto:info@scholarstix.com" class="social-btn" title="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
       </div>
     </div>
     <div>
       <div class="footer-col-title">Company</div>
       <div class="footer-links">
         <a href="#about">About Scholarstix</a>
+        <a href="#founder">Our Founder</a>
         <a href="#vmv">Vision & Mission</a>
-        <a href="#vmv">Our Values</a>
         <a href="#delivery">How We Deliver</a>
-        <a href="#contact">Careers</a>
+        <a href="#careers">Careers</a>
       </div>
     </div>
     <div>
       <div class="footer-col-title">Solutions</div>
       <div class="footer-links">
-        <a href="#segments">IntelliMed</a>
-        <a href="#segments">SuperSentrix</a>
-        <a href="#segments">Eventrix</a>
-        <a href="#segments">MemoriX</a>
-        <a href="#segments">NovaRoute</a>
+        <span onclick="openSegmentModal('intellimed')">IntelliMed</span>
+        <span onclick="openSegmentModal('supersentrix')">SuperSentrix</span>
+        <span onclick="openSegmentModal('eventrix')">Eventrix</span>
+        <span onclick="openSegmentModal('memorix')">MemoriX</span>
+        <span onclick="openSegmentModal('novaroute')">NovaRoute</span>
         <a href="#segments">View All Segments →</a>
       </div>
     </div>
@@ -1379,72 +904,386 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-bottom-text">© 2026 Scholarstix Unlimited Inc. All rights reserved. · www.scholarstix.com</div>
+    <div class="footer-bottom-text">© 2026 Scholarstix Unlimited Inc. All rights reserved. · Reg. South Africa · www.scholarstix.com</div>
     <div class="footer-bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Cookie Policy</a>
+      <span onclick="openModal('privacy-modal')">Privacy Policy</span>
+      <span onclick="openModal('terms-modal')">Terms of Service</span>
+      <span onclick="openModal('cookie-modal')">Cookie Policy</span>
     </div>
   </div>
 </footer>
 
+<!-- FLOATING BUTTONS -->
+<a id="whatsapp-btn" href="https://wa.me/+27605693546?text=Hi%20Scholarstix%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20solutions" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+  <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.659 1.435 5.18L2 22l4.945-1.397A9.945 9.945 0 0 0 12 22c5.523 0 10-4.477 10-10S17.522 2 12 2zm0 18.182a8.169 8.169 0 0 1-4.169-1.144l-.299-.178-3.09.874.874-3.025-.195-.31A8.155 8.155 0 0 1 3.818 12C3.818 7.48 7.48 3.818 12 3.818S20.182 7.48 20.182 12 16.52 20.182 12 20.182z"/></svg>
+</a>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ===== SEGMENT MODALS ===== -->
+<div class="modal-overlay" id="segment-modal" onclick="closeModalOutside(event,'segment-modal')">
+  <div class="modal-box" id="segment-modal-box">
+    <div class="modal-close"><button class="modal-close-btn" onclick="closeModal('segment-modal')"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="modal-header">
+      <div class="modal-header-inner">
+        <div class="modal-icon" id="seg-modal-icon"></div>
+        <div>
+          <div class="modal-industry-badge" id="seg-modal-industry"></div>
+          <div class="modal-brand-name" id="seg-modal-brand"></div>
+          <div class="modal-tagline" id="seg-modal-tagline"></div>
+          <div class="modal-status" id="seg-modal-status"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section-label">Overview</div>
+      <div class="modal-overview" id="seg-modal-overview"></div>
+      <div class="modal-section-label">Key Features</div>
+      <div class="modal-features" id="seg-modal-features"></div>
+      <div class="modal-divider"></div>
+      <div class="modal-meta-row" id="seg-modal-meta"></div>
+      <div class="modal-cta">
+        <a href="#contact" class="modal-btn-primary" onclick="closeModal('segment-modal')">Request a Demo</a>
+        <a href="#contact" class="modal-btn-outline" onclick="closeModal('segment-modal')">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY MODAL -->
+<div class="modal-overlay" id="privacy-modal" onclick="closeModalOutside(event,'privacy-modal')">
+  <div class="modal-box legal-modal-box">
+    <div class="modal-close"><button class="modal-close-btn" onclick="closeModal('privacy-modal')"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="legal-content">
+      <div class="legal-title">Privacy Policy</div>
+      <div class="legal-effective">Effective Date: 1 January 2026 · Last Updated: April 2026</div>
+      <div class="legal-text">Scholarstix Unlimited Inc. ("Scholarstix", "we", "our" or "us"), registered in South Africa and headquartered in Meredale, Johannesburg, is committed to protecting your personal information in accordance with the <strong>Protection of Personal Information Act 4 of 2013 (POPIA)</strong> and all applicable South African privacy legislation.</div>
+      <div class="legal-section-title">1. Information We Collect</div>
+      <div class="legal-text">We may collect the following personal information when you interact with our website, products or services:</div>
+      <ul class="legal-list">
+        <li>Identity information: full name, job title, company name</li>
+        <li>Contact details: email address, phone number, physical address</li>
+        <li>Usage data: pages visited, time on site, device type, browser type and IP address</li>
+        <li>Communication records: messages submitted via our contact form or email correspondence</li>
+        <li>Cookie and tracking data as described in our Cookie Policy</li>
+      </ul>
+      <div class="legal-section-title">2. How We Use Your Information</div>
+      <div class="legal-text">We process your personal information for the following lawful purposes:</div>
+      <ul class="legal-list">
+        <li>To respond to enquiries, demo requests and partnership proposals</li>
+        <li>To provide, maintain and improve our products and services</li>
+        <li>To send relevant communications, updates and marketing materials (where you have consented)</li>
+        <li>To analyse website usage and improve user experience</li>
+        <li>To comply with legal obligations under South African law</li>
+        <li>To process job applications submitted to our Careers section</li>
+      </ul>
+      <div class="legal-section-title">3. Legal Basis for Processing (POPIA)</div>
+      <div class="legal-text">Under POPIA, we process your personal information based on: your consent, the performance of a contract or pre-contractual steps at your request, compliance with a legal obligation, or our legitimate interests where these do not override your rights.</div>
+      <div class="legal-section-title">4. Data Sharing & Third Parties</div>
+      <div class="legal-text">We do not sell your personal information. We may share it with trusted third-party service providers (including Google Forms, Google Analytics and hosting providers) solely to facilitate our services. All third parties are required to maintain the confidentiality and security of your information. We may disclose information where required by South African law or a court order.</div>
+      <div class="legal-section-title">5. Data Retention</div>
+      <div class="legal-text">We retain personal information for as long as necessary to fulfil the purpose for which it was collected, or as required by law. Contact form submissions are retained for up to 3 years. You may request deletion of your data at any time.</div>
+      <div class="legal-section-title">6. Your Rights Under POPIA</div>
+      <div class="legal-text">As a data subject in South Africa, you have the right to:</div>
+      <ul class="legal-list">
+        <li>Request access to your personal information we hold</li>
+        <li>Request correction of inaccurate or incomplete information</li>
+        <li>Request deletion of your personal information (subject to legal retention requirements)</li>
+        <li>Object to the processing of your personal information</li>
+        <li>Lodge a complaint with the Information Regulator of South Africa at <strong>inforeg.org.za</strong></li>
+      </ul>
+      <div class="legal-section-title">7. Security</div>
+      <div class="legal-text">We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure or destruction. Our website uses HTTPS encryption for all data transmissions.</div>
+      <div class="legal-section-title">8. Contact Our Information Officer</div>
+      <div class="legal-text">To exercise your rights or for any privacy enquiries, contact our designated Information Officer at: <strong>info@scholarstix.com</strong> · Scholarstix Unlimited Inc., Meredale, Johannesburg, South Africa.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TERMS OF SERVICE MODAL -->
+<div class="modal-overlay" id="terms-modal" onclick="closeModalOutside(event,'terms-modal')">
+  <div class="modal-box legal-modal-box">
+    <div class="modal-close"><button class="modal-close-btn" onclick="closeModal('terms-modal')"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="legal-content">
+      <div class="legal-title">Terms of Service</div>
+      <div class="legal-effective">Effective Date: 1 January 2026 · Governing Law: South Africa</div>
+      <div class="legal-text">These Terms of Service ("Terms") govern your access to and use of the Scholarstix Unlimited Inc. website located at www.scholarstix.com and all associated products and services. By accessing this website you agree to be bound by these Terms.</div>
+      <div class="legal-section-title">1. Acceptance of Terms</div>
+      <div class="legal-text">By using this website or any Scholarstix product, you confirm that you are at least 18 years of age, have the legal capacity to enter into a binding agreement, and agree to comply with these Terms and all applicable South African laws.</div>
+      <div class="legal-section-title">2. Intellectual Property</div>
+      <div class="legal-text">All content on this website including but not limited to text, graphics, logos, product names (IntelliMed, SuperSentrix, Eventrix, MemoriX, SipSpace, Fork & Flame, Hammer-Time, Gear-Up, NovaRoute, Ecco-Roots, Relybex, Micro-Pulse, UBOS, Eventrix-Go, SuperSentrix POS), software, and design elements are the exclusive property of Scholarstix Unlimited Inc. and are protected by South African and international copyright and intellectual property laws. Unauthorised reproduction, distribution or modification is strictly prohibited.</div>
+      <div class="legal-section-title">3. Use of Website</div>
+      <div class="legal-text">You agree not to:</div>
+      <ul class="legal-list">
+        <li>Use this website for any unlawful or fraudulent purpose</li>
+        <li>Attempt to gain unauthorised access to any system or data</li>
+        <li>Reproduce, copy, sell or exploit any content without our express written consent</li>
+        <li>Transmit any malicious code, spam or unsolicited communications</li>
+        <li>Impersonate Scholarstix Unlimited Inc. or any of its representatives</li>
+      </ul>
+      <div class="legal-section-title">4. Products & Services</div>
+      <div class="legal-text">All Scholarstix products (including SuperSentrix POS and Eventrix-Go) are provided under separate End User Licence Agreements (EULAs) and Subscription Agreements. Product availability, pricing and features are subject to change. Scholarstix reserves the right to modify, suspend or discontinue any product or service with reasonable notice.</div>
+      <div class="legal-section-title">5. Disclaimer of Warranties</div>
+      <div class="legal-text">This website and its content are provided "as is" without any warranties of any kind, express or implied. Scholarstix does not warrant that the website will be uninterrupted, error-free or free of viruses. To the maximum extent permitted by South African law, we disclaim all implied warranties including fitness for a particular purpose.</div>
+      <div class="legal-section-title">6. Limitation of Liability</div>
+      <div class="legal-text">To the fullest extent permitted by law, Scholarstix Unlimited Inc. shall not be liable for any indirect, incidental, special, consequential or punitive damages arising from your use of this website or our products, even if we have been advised of the possibility of such damages.</div>
+      <div class="legal-section-title">7. Third-Party Links</div>
+      <div class="legal-text">Our website may contain links to third-party websites. These links are provided for convenience only. Scholarstix has no control over and accepts no responsibility for the content, privacy practices or reliability of any third-party websites.</div>
+      <div class="legal-section-title">8. Governing Law & Jurisdiction</div>
+      <div class="legal-text">These Terms are governed by and construed in accordance with the laws of the Republic of South Africa. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa.</div>
+      <div class="legal-section-title">9. Changes to Terms</div>
+      <div class="legal-text">We reserve the right to update these Terms at any time. Continued use of the website after changes constitutes acceptance of the updated Terms. We encourage you to review these Terms periodically.</div>
+      <div class="legal-section-title">10. Contact</div>
+      <div class="legal-text">For any questions regarding these Terms, contact us at: <strong>info@scholarstix.com</strong> · Scholarstix Unlimited Inc., Meredale, Johannesburg, South Africa.</div>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE POLICY MODAL -->
+<div class="modal-overlay" id="cookie-modal" onclick="closeModalOutside(event,'cookie-modal')">
+  <div class="modal-box legal-modal-box">
+    <div class="modal-close"><button class="modal-close-btn" onclick="closeModal('cookie-modal')"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="legal-content">
+      <div class="legal-title">Cookie Policy</div>
+      <div class="legal-effective">Effective Date: 1 January 2026</div>
+      <div class="legal-text">This Cookie Policy explains how Scholarstix Unlimited Inc. uses cookies and similar tracking technologies on www.scholarstix.com. This policy is aligned with South Africa's POPIA and applicable international standards.</div>
+      <div class="legal-section-title">1. What Are Cookies?</div>
+      <div class="legal-text">Cookies are small text files placed on your device when you visit a website. They help websites remember your preferences, understand how you use the site and improve your experience on future visits.</div>
+      <div class="legal-section-title">2. Types of Cookies We Use</div>
+      <div class="legal-section-title" style="font-size:13px;margin-top:0.75rem;">Essential Cookies</div>
+      <div class="legal-text">These cookies are necessary for the website to function correctly and cannot be disabled. They do not store any personally identifiable information.</div>
+      <div class="legal-section-title" style="font-size:13px;margin-top:0.75rem;">Analytics Cookies (Google Analytics)</div>
+      <div class="legal-text">We use Google Analytics (GA4) to understand how visitors interact with our website — including pages visited, time on site and referral sources. This data is aggregated and anonymised. You can opt out of Google Analytics at <strong>tools.google.com/dlpage/gaoptout</strong>.</div>
+      <div class="legal-section-title" style="font-size:13px;margin-top:0.75rem;">Preference Cookies</div>
+      <div class="legal-text">These cookies remember your preferences such as cookie consent status so we don't ask you again on every visit.</div>
+      <div class="legal-section-title" style="font-size:13px;margin-top:0.75rem;">Embedded Content Cookies</div>
+      <div class="legal-text">Our contact form is powered by Google Forms. Visiting or submitting this form may result in Google setting cookies on your device, subject to Google's own Privacy Policy.</div>
+      <div class="legal-section-title">3. Your Cookie Choices</div>
+      <div class="legal-text">When you first visit our website, you will see a cookie consent banner. You can choose to accept all cookies or decline non-essential cookies. You can also manage cookies through your browser settings at any time. Note that disabling certain cookies may affect the functionality of our website.</div>
+      <div class="legal-section-title">4. Cookie Retention</div>
+      <ul class="legal-list">
+        <li>Essential cookies: Session-based (deleted when browser closes)</li>
+        <li>Analytics cookies: Up to 2 years</li>
+        <li>Preference cookies (consent): Up to 1 year</li>
+      </ul>
+      <div class="legal-section-title">5. Contact</div>
+      <div class="legal-text">For questions about our use of cookies, contact us at: <strong>info@scholarstix.com</strong></div>
+    </div>
+  </div>
+</div>
+
 <script>
-  // Intersection observer for fade-in
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Mobile menu toggle
-  function toggleMenu() {
-    const links = document.querySelector('.nav-links');
-    if (links.style.display === 'flex') {
-      links.style.display = '';
-      links.style.flexDirection = '';
-      links.style.position = '';
-      links.style.top = '';
-      links.style.left = '';
-      links.style.right = '';
-      links.style.background = '';
-      links.style.padding = '';
-      links.style.gap = '';
-      links.style.borderBottom = '';
-    } else {
-      links.style.display = 'flex';
-      links.style.flexDirection = 'column';
-      links.style.position = 'absolute';
-      links.style.top = '72px';
-      links.style.left = '0';
-      links.style.right = '0';
-      links.style.background = 'rgba(10,46,40,0.98)';
-      links.style.padding = '1.5rem 2rem';
-      links.style.gap = '1.2rem';
-      links.style.borderBottom = '1px solid rgba(58,174,155,0.2)';
-    }
+// ── SEGMENT DATA ──
+const segmentData = {
+  intellimed: {
+    icon: '🏥', color: '#d4f5e2', industry: 'Healthcare',
+    brand: 'IntelliMed', tagline: 'Smart Healthcare Management for Modern Clinics & Practices',
+    status: 'dev', statusText: 'In Development',
+    overview: 'IntelliMed is Scholarstix\'s AI-powered healthcare management platform designed specifically for independent clinics, GP practices, specialist rooms and community health facilities across Africa. It replaces disjointed paper-based and legacy systems with a unified, intelligent platform that puts patient care first and administrative burden last.',
+    features: ['Patient registration & digital records','Appointment scheduling & reminders (SMS/Email)','AI-assisted diagnosis support & symptom triage','Prescription management & drug interaction alerts','Billing, medical aid claims & payment tracking','Staff & practitioner scheduling','Secure patient communication portal','HPCSA compliance documentation support','Reporting & clinic performance analytics','Multi-branch practice management'],
+    platform: 'Android 14+ · Web Dashboard', market: 'GP Practices, Clinics, Specialists', model: 'SaaS Subscription'
+  },
+  supersentrix: {
+    icon: '🛒', color: '#d5e9ff', industry: 'Supermarket Retail & Wholesale',
+    brand: 'SuperSentrix', tagline: 'AI-Powered POS & Inventory Intelligence for Retailers',
+    status: 'live', statusText: 'Live — Available Now',
+    overview: 'SuperSentrix is Scholarstix\'s flagship retail intelligence platform, purpose-built for independent supermarkets, spaza shops, bottle stores with retail, and wholesale operators. The SuperSentrix POS Android app gives store owners real-time operational command from a single smart device — replacing manual stock books, paper receipts and disconnected systems.',
+    features: ['Full Point-of-Sale with receipt printing','Real-time inventory tracking & alerts','AI-driven stock replenishment recommendations','Barcode & QR code scanning support','Multi-payment: cash, card, EFT, voucher','Supplier order management','Customer loyalty & rewards programme','Daily/weekly/monthly sales reports','Multi-till & multi-branch support','Theft & shrinkage detection alerts'],
+    platform: 'Android 14+ Mobile App', market: 'Supermarkets, Spaza Shops, Wholesalers', model: 'SaaS Subscription'
+  },
+  eventrix: {
+    icon: '🎟️', color: '#fef3cd', industry: 'Events Management',
+    brand: 'Eventrix', tagline: 'Complete Event Lifecycle Management — Plan, Execute, Analyse',
+    status: 'live', statusText: 'Live — Eventrix-Go Available Now',
+    overview: 'Eventrix is Scholarstix\'s AI-powered events management platform serving independent event planners, venues, corporate event coordinators and community organisers. The Eventrix-Go mobile Android app puts your entire event operation in your pocket — from initial concept through execution to post-event reporting.',
+    features: ['Full event planning & task management','Digital ticketing & QR code check-in','Guest list management & RSVP tracking','Vendor & supplier coordination hub','Budget management & expense tracking','Venue & equipment booking system','AI event timeline optimisation','Sponsorship management & reporting','Staff & volunteer scheduling','Post-event analytics & ROI reporting'],
+    platform: 'Android 14+ Mobile App (Eventrix-Go)', market: 'Event Planners, Venues, Corporate Events', model: 'SaaS Subscription'
+  },
+  memorix: {
+    icon: '🕊️', color: '#e2f5f2', industry: 'Funeral Homes & Services',
+    brand: 'MemoriX', tagline: 'Dignified, Efficient Funeral Service Management',
+    status: 'dev', statusText: 'In Development',
+    overview: 'MemoriX is Scholarstix\'s compassionate yet powerful management platform built exclusively for independent funeral homes and bereavement service providers. It handles the complex administrative, logistical and family communication needs of running a funeral business — so that staff can focus on what matters most: caring for families in their time of need.',
+    features: ['Family & case management portal','Deceased intake & documentation workflow','Chapel, hearse & staff scheduling','Coffin & merchandise inventory management','Family communication & notifications','Invoice, payment plan & insurance billing','Burial/cremation permit documentation','Multi-location branch management','Fleet (hearse) tracking & maintenance','Regulatory compliance reporting'],
+    platform: 'Android 14+ · Web Dashboard', market: 'Independent Funeral Homes, Mortuaries', model: 'SaaS Subscription'
+  },
+  sipspace: {
+    icon: '🍺', color: '#ffecd2', industry: 'Liquor Trade',
+    brand: 'SipSpace', tagline: 'Smart Liquor Retail Operations & Compliance Management',
+    status: 'dev', statusText: 'In Development',
+    overview: 'SipSpace is Scholarstix\'s AI-powered platform for independent liquor retailers, bottle stores and on-consumption establishments. Beyond standard POS functionality, SipSpace is built with South African liquor licensing regulations at its core — helping owners stay compliant while maximising profitability.',
+    features: ['Liquor-specific POS with age verification','Real-time stock management by SKU/brand','Regulatory compliance tracking & alerts','Supplier order management & pricing','Sales analytics by product category','Licence renewal reminder system','Staff shift & access management','Customer loyalty programme','Theft & shrinkage monitoring','SAPS & municipality compliance reports'],
+    platform: 'Android 14+ · Web Dashboard', market: 'Bottle Stores, Taverns, Liquor Retailers', model: 'SaaS Subscription'
+  },
+  forkflame: {
+    icon: '🔥', color: '#fde8e8', industry: 'Pub & Meat Griller / F&B',
+    brand: 'Fork & Flame', tagline: 'From Grill to Till — Restaurant & Pub Operations, Simplified',
+    status: 'dev', statusText: 'In Development',
+    overview: 'Fork & Flame is Scholarstix\'s food and beverage management platform designed for South African pubs, braai restaurants, meat grillers and casual dining establishments. It bridges front-of-house and kitchen operations into one intelligent system — reducing errors, speeding up service and increasing profitability.',
+    features: ['Table management & reservations','Digital menu & kitchen order display','Split billing & multiple payment methods','Bar tab & running bill management','Stock & ingredient inventory control','Supplier ordering & recipe costing','Staff scheduling & tip management','Daily cash-up & Z-reading reports','Customer loyalty & repeat visitor tracking','Health & safety compliance checklists'],
+    platform: 'Android 14+ · Kitchen Display System', market: 'Pubs, Restaurants, Meat Grillers, Braai Spots', model: 'SaaS Subscription'
+  },
+  hammertime: {
+    icon: '🔨', color: '#ede7f6', industry: 'Builders & Hardware',
+    brand: 'Hammer-Time', tagline: 'Hardware Store Intelligence — From Counter to Construction Site',
+    status: 'dev', statusText: 'In Development',
+    overview: 'Hammer-Time is Scholarstix\'s AI-powered management system for independent builders merchants, hardware stores and building material suppliers. It handles the unique complexities of hardware retail — from high-volume SKU catalogues and trade accounts to project quotations and delivery management.',
+    features: ['High-volume product catalogue & barcode POS','Trade account & credit management','Quotation & job card generation','Supplier ordering & pricing management','Stock by category, brand & shelf location','Delivery scheduling & driver tracking','Customer project history & repeat orders','AI stock forecasting for seasonal items','Multi-branch inventory visibility','Contractor loyalty & discount programme'],
+    platform: 'Android 14+ · Web Dashboard', market: 'Hardware Stores, Builders Merchants', model: 'SaaS Subscription'
+  },
+  gearup: {
+    icon: '⚙️', color: '#e0e9f0', industry: 'Auto Spares',
+    brand: 'Gear-Up', tagline: 'Auto Parts Intelligence — Workshop to Counter, Covered',
+    status: 'dev', statusText: 'In Development',
+    overview: 'Gear-Up is Scholarstix\'s specialist platform for independent auto spares retailers and workshop operators. It solves the unique challenges of auto parts management — massive catalogues, VIN-specific part matching, workshop job cards and warranty tracking — in one unified Android-first platform.',
+    features: ['VIN/registration-based part lookup','Auto parts catalogue with cross-reference','Workshop job card & labour management','Parts inventory by make, model & year','Supplier ordering & back-order tracking','Customer vehicle history & service records','Warranty claim tracking & processing','Quotation & invoice generation','Cash sales & trade account billing','AI demand forecasting by vehicle type'],
+    platform: 'Android 14+ · Web Dashboard', market: 'Auto Spares Shops, Panel Beaters, Workshops', model: 'SaaS Subscription'
+  },
+  novaroute: {
+    icon: '🚚', color: '#e2f5f2', industry: 'Transport & Logistics',
+    brand: 'NovaRoute', tagline: 'Fleet Intelligence & Route Optimisation for African Roads',
+    status: 'dev', statusText: 'In Development',
+    overview: 'NovaRoute is Scholarstix\'s transport and logistics management platform designed for independent fleet operators, courier services and freight companies across Southern Africa. It combines real-time fleet visibility with AI route optimisation to reduce fuel costs, improve delivery reliability and ensure full regulatory compliance.',
+    features: ['Real-time GPS fleet tracking','AI-powered route optimisation','Driver management & performance scoring','Delivery scheduling & customer notifications','Fuel management & cost tracking','Vehicle maintenance scheduling & alerts','Proof of delivery (POD) capture','Load planning & freight documentation','RTMS & C-TPAT compliance support','Customer portal & delivery tracking link'],
+    platform: 'Android 14+ · Web Dashboard · Driver App', market: 'Courier Companies, Fleet Operators, Freight Forwarders', model: 'SaaS Subscription'
+  },
+  eccoroots: {
+    icon: '📚', color: '#e8f5e2', industry: 'Education',
+    brand: 'Ecco-Roots', tagline: 'Empowering African Educators with AI-Driven Learning Management',
+    status: 'dev', statusText: 'In Development',
+    overview: 'Ecco-Roots is Scholarstix\'s educational technology platform designed for independent schools, tutoring centres, early childhood development (ECD) facilities and private training providers across Africa. It brings modern learning management capabilities to institutions that have been underserved by expensive international EdTech platforms.',
+    features: ['Student enrolment & profile management','Attendance tracking (biometric/manual)','Timetable & classroom scheduling','AI-personalised learning progress tracking','Fee collection & payment plans','Parent communication portal (SMS/App)','Teacher & staff management','Homework & assessment management','Report card generation & distribution','SACE & DBE compliance support'],
+    platform: 'Android 14+ · Web Dashboard · Parent App', market: 'Private Schools, Tutoring Centres, ECD Facilities', model: 'SaaS Subscription'
+  },
+  relybex: {
+    icon: '🔧', color: '#e2f5f2', industry: 'MRO — Maintenance, Repair & Overhaul',
+    brand: 'Relybex', tagline: 'Proactive Maintenance Management — Before Breakdown, Not After',
+    status: 'dev', statusText: 'In Development',
+    overview: 'Relybex is Scholarstix\'s AI-powered Maintenance, Repair and Overhaul (MRO) management platform for independent service providers, property maintenance companies, industrial facility managers and equipment servicing businesses. It shifts organisations from reactive to proactive maintenance — reducing downtime, cutting costs and extending asset life.',
+    features: ['Asset register & lifecycle management','Planned preventive maintenance scheduling','Work order creation & technician dispatch','Parts & spares inventory management','AI predictive failure alerts','Inspection checklists & compliance logs','SLA tracking & client reporting','Technician mobile app for on-site updates','Cost-per-asset reporting & analytics','Warranty & service contract management'],
+    platform: 'Android 14+ · Web Dashboard · Technician App', market: 'Facility Managers, MRO Service Providers, Industrial Plants', model: 'SaaS Subscription'
+  },
+  micropulse: {
+    icon: '🏭', color: '#fde8e8', industry: 'Manufacturing Operations',
+    brand: 'Micro-Pulse & UBOS Enterprise Suite', tagline: 'AI-Powered Production Intelligence for Modern Manufacturers',
+    status: 'dev', statusText: 'In Development',
+    overview: 'Micro-Pulse is Scholarstix\'s manufacturing operations management platform for small and mid-size manufacturers. The UBOS (Unified Business Operating System) Enterprise Suite extends this into a comprehensive ERP-level platform for growing manufacturers who need integrated control over production, inventory, quality, workforce and financial operations — without the cost and complexity of traditional enterprise ERP systems.',
+    features: ['Production planning & scheduling','Bill of Materials (BOM) management','Real-time machine & line monitoring','OEE (Overall Equipment Effectiveness) tracking','Quality control & defect management','Raw material & WIP inventory control','Workforce attendance & shift management','AI demand forecasting & production planning','Customer order & delivery management','Financial reporting & cost accounting'],
+    platform: 'Web Dashboard · Android Supervisor App', market: 'SME Manufacturers, Light Industry, Assembly Operations', model: 'SaaS Subscription / Enterprise Licence'
   }
+};
 
-  // Reset mobile menu on window resize
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 960) {
-      const links = document.querySelector('.nav-links');
-      links.style.display = '';
-      links.style.flexDirection = '';
-      links.style.position = '';
-      links.style.top = '';
-      links.style.left = '';
-      links.style.right = '';
-      links.style.background = '';
-      links.style.padding = '';
-      links.style.gap = '';
-      links.style.borderBottom = '';
+function openSegmentModal(key) {
+  const d = segmentData[key];
+  if (!d) return;
+  document.getElementById('seg-modal-icon').textContent = d.icon;
+  document.getElementById('seg-modal-icon').style.background = d.color;
+  document.getElementById('seg-modal-industry').textContent = d.industry;
+  document.getElementById('seg-modal-brand').textContent = d.brand;
+  document.getElementById('seg-modal-tagline').textContent = d.tagline;
+  const statusEl = document.getElementById('seg-modal-status');
+  statusEl.textContent = d.statusText;
+  statusEl.className = 'modal-status ' + d.status;
+  document.getElementById('seg-modal-overview').textContent = d.overview;
+  const featuresEl = document.getElementById('seg-modal-features');
+  featuresEl.innerHTML = d.features.map(f => `<div class="modal-feature-item">${f}</div>`).join('');
+  document.getElementById('seg-modal-meta').innerHTML = `
+    <div class="modal-meta-item"><div class="modal-meta-label">Platform</div><div class="modal-meta-val">${d.platform}</div></div>
+    <div class="modal-meta-item"><div class="modal-meta-label">Target Market</div><div class="modal-meta-val">${d.market}</div></div>
+    <div class="modal-meta-item"><div class="modal-meta-label">Business Model</div><div class="modal-meta-val">${d.model}</div></div>
+  `;
+  openModal('segment-modal');
+}
+
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e, id) {
+  if (e.target === document.getElementById(id)) closeModal(id);
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    ['segment-modal','privacy-modal','terms-modal','cookie-modal'].forEach(closeModal);
+  }
+});
+
+// ── SCROLL PROGRESS ──
+window.addEventListener('scroll', function() {
+  const scrollTop = document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById('scroll-progress').style.width = (scrollTop / docHeight * 100) + '%';
+  const btn = document.getElementById('back-to-top');
+  scrollTop > 400 ? btn.classList.add('visible') : btn.classList.remove('visible');
+}, {passive: true});
+
+// ── FADE IN ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      observer.unobserve(e.target);
     }
   });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── MOBILE MENU ──
+function toggleMenu() {
+  const links = document.getElementById('nav-links');
+  const isOpen = links.style.display === 'flex';
+  if (isOpen) {
+    links.style.cssText = '';
+  } else {
+    links.style.display = 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '72px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(10,46,40,0.99)';
+    links.style.padding = '1.5rem 2rem';
+    links.style.gap = '1.2rem';
+    links.style.borderBottom = '1px solid rgba(58,174,155,0.2)';
+    links.style.zIndex = '999';
+  }
+}
+
+document.getElementById('nav-links').querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (window.innerWidth <= 960) {
+      document.getElementById('nav-links').style.cssText = '';
+    }
+  });
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 960) document.getElementById('nav-links').style.cssText = '';
+});
+
+// ── COOKIE BANNER ──
+function acceptCookie() {
+  localStorage.setItem('sx_cookie', 'accepted');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+function dismissCookie() {
+  localStorage.setItem('sx_cookie', 'declined');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+window.addEventListener('DOMContentLoaded', function() {
+  if (!localStorage.getItem('sx_cookie')) {
+    setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 1500);
+  }
+});
 </script>
 </body>
 </html>
