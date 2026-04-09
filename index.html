@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Scholarstix Unlimited Inc. | AI-Powered Operating Systems</title>
+<meta name="description" content="Scholarstix Unlimited Inc. designs AI-powered operating systems that replace operational chaos with control – for African SMMEs and beyond.">
+<meta name="author" content="Scholarstix Unlimited Inc.">
+<!-- Favicon (simple SVG data URI – works everywhere) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%232a9180'/%3E%3Ctext x='50' y='67' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --teal-900: #0a2e28;
+    --teal-800: #123d35;
+    --teal-700: #1a5249;
+    --teal-600: #1f6358;
+    --teal-500: #237a6b;
+    --teal-400: #2a9180;
+    --teal-300: #3aae9b;
+    --teal-200: #6ecbbf;
+    --teal-100: #a8e4db;
+    --teal-50:  #e2f5f2;
+    --green-500: #2fa84f;
+    --green-400: #3dc45f;
+    --green-300: #5ed17c;
+    --circuit-blue: #2b7de9;
+    --circuit-blue-light: #5aa3f5;
+    --gold: #c9a84c;
+    --white: #ffffff;
+    --off-white: #f6faf9;
+    --text-dark: #0d1f1c;
+    --text-mid: #2e4d47;
+    --text-muted: #5a7a74;
+    --border: rgba(26,83,73,0.15);
+    --shadow-card: 0 8px 40px rgba(10,46,40,0.12);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--off-white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,46,40,0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(58,174,155,0.2);
+    padding: 0 2rem;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-brand {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none;
+  }
+
+  .nav-logo-circle {
+    width: 44px; height: 44px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .nav-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .nav-brand-text {
+    display: flex; flex-direction: column; line-height: 1.1;
+  }
+
+  .nav-brand-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-brand-tag {
+    font-size: 10px;
+    color: var(--teal-200);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--teal-100);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--teal-300); }
+
+  .nav-cta {
+    background: var(--teal-400);
+    color: #fff !important;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--teal-300) !important; color: #fff !important; }
+
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .nav-hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; display: block; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: var(--teal-900);
+    display: flex; align-items: center;
+    padding: 120px 2rem 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 70% 30%, rgba(42,145,128,0.15) 0%, transparent 55%),
+      radial-gradient(circle at 20% 80%, rgba(43,125,233,0.1) 0%, transparent 45%);
+    pointer-events: none;
+  }
+
+  .hero-grid-lines {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(58,174,155,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(58,174,155,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: center;
+    position: relative; z-index: 1;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(58,174,155,0.15);
+    border: 1px solid rgba(58,174,155,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px;
+    color: var(--teal-200);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--green-400);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:0.5;transform:scale(1.3)}
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title .accent { color: var(--teal-300); }
+  .hero-title .accent2 { color: var(--green-300); }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--teal-100);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    max-width: 480px;
+  }
+
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--teal-400);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+
+  .btn-primary:hover { background: var(--teal-300); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--teal-300); background: rgba(58,174,155,0.1); }
+
+  .hero-stats {
+    display: flex; gap: 2rem; margin-top: 3rem;
+  }
+
+  .hero-stat .num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--teal-300);
+  }
+
+  .hero-stat .lbl {
+    font-size: 12px;
+    color: var(--teal-200);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-visual {
+    display: flex; justify-content: center; align-items: center;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(58,174,155,0.25);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-card-header {
+    font-size: 12px;
+    color: var(--teal-200);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .segment-list {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .segment-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(58,174,155,0.15);
+    font-size: 13px;
+    color: var(--teal-100);
+    transition: background 0.2s;
+  }
+
+  .segment-item:hover { background: rgba(58,174,155,0.12); }
+
+  .seg-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .seg-dot.green { background: var(--green-400); }
+  .seg-dot.blue  { background: var(--circuit-blue-light); }
+  .seg-dot.gold  { background: var(--gold); }
+  .seg-dot.teal  { background: var(--teal-300); }
+
+  .seg-brand {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--teal-400);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── SECTION STRUCTURE ── */
+  section { padding: 100px 2rem; }
+
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal-600);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--teal-900);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.8;
+  }
+
+  .section-header { margin-bottom: 3.5rem; }
+
+  /* ── ABOUT ── */
+  #about { background: #fff; }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+  }
+
+  .about-img-wrap {
+    position: relative;
+  }
+
+  .about-visual {
+    background: linear-gradient(135deg, var(--teal-800), var(--teal-600));
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    color: #fff;
+    position: relative; overflow: hidden;
+  }
+
+  .about-visual::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: rgba(58,174,155,0.15);
+    border-radius: 50%;
+  }
+
+  .about-visual-quote {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    position: relative; z-index: 1;
+  }
+
+  .about-visual-tag {
+    font-size: 12px;
+    color: var(--teal-200);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative; z-index: 1;
+  }
+
+  .about-accent-card {
+    position: absolute; bottom: -20px; right: -20px;
+    background: var(--teal-400);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    color: #fff;
+    font-size: 13px;
+    box-shadow: 0 10px 30px rgba(26,83,73,0.3);
+  }
+
+  .about-accent-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .about-content p { color: var(--text-mid); margin-bottom: 1.2rem; line-height: 1.85; }
+
+  .about-features { display: flex; flex-direction: column; gap: 12px; margin-top: 1.5rem; }
+
+  .about-feature {
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+
+  .feature-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    background: var(--teal-50);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .feature-icon svg { width: 18px; height: 18px; }
+
+  .feature-text { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+  .feature-text strong { color: var(--teal-700); display: block; font-weight: 600; margin-bottom: 2px; }
+
+  /* ── VISION MISSION VALUES ── */
+  #vmv { background: var(--off-white); }
+
+  .vmv-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .vmv-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--border);
+    position: relative; overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .vmv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+
+  .vmv-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--teal-400), var(--green-400));
+  }
+
+  .vmv-icon {
+    width: 56px; height: 56px;
+    background: var(--teal-50);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .vmv-icon svg { width: 28px; height: 28px; stroke: var(--teal-600); fill: none; stroke-width: 1.8; }
+
+  .vmv-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal-500);
+    margin-bottom: 0.5rem;
+  }
+
+  .vmv-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--teal-900);
+    margin-bottom: 1rem;
+  }
+
+  .vmv-text { font-size: 14px; color: var(--text-muted); line-height: 1.8; }
+
+  /* Values section */
+  .values-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1rem; margin-top: 2.5rem;
+  }
+
+  .value-pill {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .value-pill:hover { border-color: var(--teal-400); transform: translateY(-4px); }
+
+  .value-icon-wrap {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, var(--teal-50), #e8f8f4);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+  }
+
+  .value-icon-wrap svg { width: 22px; height: 22px; stroke: var(--teal-600); fill: none; stroke-width: 1.8; }
+
+  .value-name {
+    font-size: 13px; font-weight: 700;
+    color: var(--teal-800);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+
+  .value-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── HOW WE DELIVER ── */
+  #delivery { background: var(--teal-900); }
+
+  #delivery .section-title { color: #fff; }
+  #delivery .section-eyebrow { color: var(--teal-300); }
+  #delivery .section-sub { color: var(--teal-100); }
+
+  .delivery-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; margin-top: 1rem;
+  }
+
+  .delivery-step {
+    position: relative;
+    padding: 2rem 1.5rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(58,174,155,0.2);
+    border-radius: var(--radius-lg);
+    transition: background 0.25s, border-color 0.25s;
+    overflow: hidden;
+  }
+
+  .delivery-step:hover {
+    background: rgba(58,174,155,0.1);
+    border-color: rgba(58,174,155,0.4);
+  }
+
+  .step-num {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(58,174,155,0.12);
+    line-height: 1;
+    position: absolute; top: 1rem; right: 1.2rem;
+  }
+
+  .step-badge {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 32px; height: 32px;
+    background: var(--teal-500);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--teal-100);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .step-desc { font-size: 13px; color: var(--teal-200); line-height: 1.65; }
+
+  .delivery-steps-row2 {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 1.5rem;
+  }
+
+  /* ── SEGMENTS ── */
+  #segments { background: #fff; }
+
+  .segments-intro { margin-bottom: 3rem; }
+
+  .segments-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .seg-card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.25rem;
+    position: relative; overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    background: #fff;
+    cursor: default;
+  }
+
+  .seg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(10,46,40,0.1);
+    border-color: var(--teal-300);
+  }
+
+  .seg-card-accent {
+    position: absolute; top: 0; left: 0;
+    width: 4px; height: 100%;
+    border-radius: 0;
+  }
+
+  .seg-card-industry {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .seg-card-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--teal-900);
+    margin-bottom: 4px;
+  }
+
+  .seg-card-brand {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal-600);
+    background: var(--teal-50);
+    border-radius: 100px;
+    padding: 3px 10px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── PRODUCTS ── */
+  #products { background: var(--off-white); }
+
+  .products-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .product-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    display: flex; gap: 2rem; align-items: flex-start;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+
+  .product-icon-wrap {
+    width: 72px; height: 72px; flex-shrink: 0;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+  }
+
+  .product-icon-wrap.green { background: linear-gradient(135deg, #d4f5e2, #a8e6c2); }
+  .product-icon-wrap.blue  { background: linear-gradient(135deg, #d5e9ff, #b0d4ff); }
+
+  .product-segment {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--teal-500);
+    margin-bottom: 4px;
+  }
+
+  .product-name {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 800;
+    color: var(--teal-900); margin-bottom: 8px;
+  }
+
+  .product-desc { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 1rem; }
+
+  .product-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 600;
+    background: var(--teal-50);
+    color: var(--teal-700);
+    border-radius: 100px;
+    padding: 4px 12px;
+    border: 1px solid rgba(26,83,73,0.12);
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: linear-gradient(135deg, var(--teal-800), var(--teal-900));
+    color: #fff;
+  }
+
+  #contact .section-title { color: #fff; }
+  #contact .section-eyebrow { color: var(--teal-300); }
+
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+
+  .contact-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: rgba(58,174,155,0.15);
+    border: 1px solid rgba(58,174,155,0.25);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .contact-icon svg { width: 20px; height: 20px; stroke: var(--teal-300); fill: none; stroke-width: 1.8; }
+
+  .contact-item-label { font-size: 11px; color: var(--teal-300); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 3px; }
+  .contact-item-val { font-size: 15px; color: var(--teal-100); }
+
+  .contact-form {
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+  }
+
+  .contact-form iframe {
+    border-radius: var(--radius-lg);
+    display: block;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--teal-900);
+    border-top: 1px solid rgba(58,174,155,0.15);
+    padding: 3rem 2rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-logo {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;
+  }
+
+  .footer-logo-circle {
+    width: 40px; height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .footer-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .footer-logo-name {
+    font-family: var(--font-display);
+    font-size: 16px; font-weight: 700;
+    color: #fff;
+  }
+
+  .footer-logo-sub { font-size: 10px; color: var(--teal-300); letter-spacing: 0.06em; }
+
+  .footer-tagline { font-size: 13px; color: var(--teal-200); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+
+  .footer-social { display: flex; gap: 10px; }
+
+  .social-btn {
+    width: 36px; height: 36px;
+    background: rgba(58,174,155,0.12);
+    border: 1px solid rgba(58,174,155,0.2);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: background 0.2s;
+    text-decoration: none;
+  }
+
+  .social-btn:hover { background: rgba(58,174,155,0.25); }
+  .social-btn svg { width: 16px; height: 16px; stroke: var(--teal-200); fill: none; stroke-width: 1.8; }
+
+  .footer-col-title {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--teal-300);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links { display: flex; flex-direction: column; gap: 8px; }
+
+  .footer-links a {
+    font-size: 13px; color: var(--teal-100);
+    text-decoration: none; transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--teal-300); }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 2.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(58,174,155,0.12);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+
+  .footer-bottom-text { font-size: 12px; color: var(--teal-300); }
+
+  .footer-bottom-links { display: flex; gap: 1.5rem; }
+  .footer-bottom-links a { font-size: 12px; color: var(--teal-300); text-decoration: none; transition: color 0.2s; }
+  .footer-bottom-links a:hover { color: var(--teal-200); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .vmv-grid { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: repeat(2,1fr); }
+    .delivery-steps, .delivery-steps-row2 { grid-template-columns: repeat(2,1fr); }
+    .segments-grid { grid-template-columns: repeat(2,1fr); }
+    .products-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 70px 1.25rem; }
+    .segments-grid { grid-template-columns: 1fr; }
+    .delivery-steps, .delivery-steps-row2 { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: repeat(2,1fr); }
+    .hero-stats { flex-wrap: wrap; gap: 1.2rem; }
+  }
+
+  /* ── ANIMATION ── */
+  .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  .scroll-hint {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--teal-300); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    animation: bounce 2s infinite;
+  }
+
+  .scroll-hint-arrow { width: 18px; height: 18px; border-right: 2px solid; border-bottom: 2px solid; transform: rotate(45deg); border-color: var(--teal-300); }
+
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  .section-divider {
+    width: 48px; height: 4px;
+    background: linear-gradient(90deg, var(--teal-400), var(--green-400));
+    border-radius: 2px;
+    margin: 1rem 0 1.5rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-logo-circle">
+      <img src="scholarstix.png" alt="Scholarstix Unlimited Inc. logo">
+    </div>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">Scholarstix Unlimited Inc.</span>
+      <span class="nav-brand-tag">Innovating Efficiency · Improving Productivity</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#vmv">Vision & Values</a></li>
+    <li><a href="#delivery">How We Deliver</a></li>
+    <li><a href="#segments">Our Segments</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-left fade-in">
+      <div class="hero-eyebrow">AI-Powered Operating Systems</div>
+      <h1 class="hero-title">
+        Replace Operational<br/>
+        <span class="accent">Chaos</span> with<br/>
+        <span class="accent2">Control</span>
+      </h1>
+      <p class="hero-desc">
+        Scholarstix Unlimited Inc. designs, develops and integrates cutting-edge AI technology solutions that drive efficiency, productivity and sustainability across African SMMEs — and beyond.
+      </p>
+      <div class="hero-actions">
+        <a href="#segments" class="btn-primary">Explore Our Solutions →</a>
+        <a href="#about" class="btn-outline">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">12</div><div class="lbl">Industry Segments</div></div>
+        <div class="hero-stat"><div class="num">2</div><div class="lbl">Live Android Apps</div></div>
+        <div class="hero-stat"><div class="num">1</div><div class="lbl">Bold Vision</div></div>
+      </div>
+    </div>
+    <div class="hero-visual fade-in">
+      <div class="hero-card">
+        <div class="hero-card-header">Active Business Segments</div>
+        <div class="segment-list">
+          <div class="segment-item"><span class="seg-dot green"></span>Healthcare <span class="seg-brand">IntelliMed</span></div>
+          <div class="segment-item"><span class="seg-dot blue"></span>Supermarket Retail <span class="seg-brand">SuperSentrix</span></div>
+          <div class="segment-item"><span class="seg-dot gold"></span>Events Management <span class="seg-brand">Eventrix</span></div>
+          <div class="segment-item"><span class="seg-dot teal"></span>Funeral Services <span class="seg-brand">MemoriX</span></div>
+          <div class="segment-item"><span class="seg-dot green"></span>Transport Logistics <span class="seg-brand">NovaRoute</span></div>
+          <div class="segment-item"><span class="seg-dot blue"></span>Manufacturing <span class="seg-brand">Micro-Pulse</span></div>
+          <div class="segment-item"><span class="seg-dot gold"></span>Education <span class="seg-brand">Ecco-Roots</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-hint-arrow"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-in">
+        <div class="about-visual">
+          <div class="about-visual-quote">"Innovating Efficiency, Improving Productivity — One Innovation at a Time."</div>
+          <div class="about-visual-tag">Scholarstix Unlimited Inc. · Est. Africa</div>
+        </div>
+        <div class="about-accent-card">
+          <div class="about-accent-num">7</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-top:4px;">Delivery Steps</div>
+        </div>
+      </div>
+      <div class="about-content fade-in">
+        <div class="section-eyebrow">Who We Are</div>
+        <h2 class="section-title">Technology That Works as Hard as You Do</h2>
+        <div class="section-divider"></div>
+        <p>
+          Scholarstix Unlimited Inc. is a forward-thinking technology company that innovates, designs, and integrates bespoke solutions for improved operational efficiency and productivity across diverse industries.
+        </p>
+        <p>
+          We specialize in building AI-powered operating systems tailored specifically for African SMMEs — empowering small and medium businesses with the same technological firepower previously reserved for large enterprises.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="feature-text"><strong>Vertical-Specific Platforms</strong>Industry-aware AI built for your exact business context, not generic software.</div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="feature-text"><strong>Decision-Driven AI Integration</strong>Practical intelligence embedded directly into daily operational workflows.</div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" stroke="var(--teal-600)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="feature-text"><strong>Partnership-First Culture</strong>We grow with our clients — from deployment through scale and beyond.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION MISSION VALUES -->
+<section id="vmv">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Purpose & Direction</div>
+      <h2 class="section-title">Vision, Mission & Values</h2>
+      <p class="section-sub">Our north star for every product we build, every partnership we forge, and every decision we make.</p>
+    </div>
+    <div class="vmv-grid">
+      <div class="vmv-card fade-in">
+        <div class="vmv-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <div class="vmv-label">Our Vision</div>
+        <div class="vmv-title">Transform Operational Excellence</div>
+        <div class="vmv-text">To transform operational excellence in Africa and beyond — one innovation at a time. We see a continent where every SMME has access to world-class AI-powered systems.</div>
+      </div>
+      <div class="vmv-card fade-in">
+        <div class="vmv-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="vmv-label">Our Mission</div>
+        <div class="vmv-title">Design. Develop. Integrate.</div>
+        <div class="vmv-text">To design, develop and integrate innovative technology solutions that drive operational efficiency, productivity and sustainability for our clients — while fostering a culture of excellence, integrity and customer delight.</div>
+      </div>
+      <div class="vmv-card fade-in">
+        <div class="vmv-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="vmv-label">Our Promise</div>
+        <div class="vmv-title">Rooted in Core Values</div>
+        <div class="vmv-text">Innovation, Excellence, Integrity, Customer-Centricity and Collaboration aren't just words at Scholarstix — they are the operating principles behind every line of code we write.</div>
+      </div>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-pill fade-in">
+        <div class="value-icon-wrap">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="value-name">Innovation</div>
+        <div class="value-desc">Embracing creativity to drive growth and excellence</div>
+      </div>
+      <div class="value-pill fade-in">
+        <div class="value-icon-wrap">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="value-name">Excellence</div>
+        <div class="value-desc">Exceptional quality, service and results in all we do</div>
+      </div>
+      <div class="value-pill fade-in">
+        <div class="value-icon-wrap">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="value-name">Integrity</div>
+        <div class="value-desc">Ethics, transparency and accountability always</div>
+      </div>
+      <div class="value-pill fade-in">
+        <div class="value-icon-wrap">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="value-name">Customer-Centricity</div>
+        <div class="value-desc">Clients at the forefront of every decision</div>
+      </div>
+      <div class="value-pill fade-in">
+        <div class="value-icon-wrap">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="value-name">Collaboration</div>
+        <div class="value-desc">Teamwork, open communication and mutual respect</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE DELIVER -->
+<section id="delivery">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Our Process</div>
+      <h2 class="section-title">How We Deliver</h2>
+      <p class="section-sub" style="color:var(--teal-100)">A rigorous, research-backed 7-step methodology that transforms market opportunity into world-class deployed technology.</p>
+    </div>
+    <div class="delivery-steps">
+      <div class="delivery-step fade-in">
+        <div class="step-num">01</div>
+        <div class="step-badge">1</div>
+        <div class="step-title">Market & Industry Scanning</div>
+        <div class="step-desc">Deep intelligence gathering across target industries to understand current landscapes, player dynamics and emerging trends.</div>
+      </div>
+      <div class="delivery-step fade-in">
+        <div class="step-num">02</div>
+        <div class="step-badge">2</div>
+        <div class="step-title">Opportunity & Gap Identification</div>
+        <div class="step-desc">Pinpointing underserved gaps where technology can create decisive competitive advantage for SMMEs.</div>
+      </div>
+      <div class="delivery-step fade-in">
+        <div class="step-num">03</div>
+        <div class="step-badge">3</div>
+        <div class="step-title">Extensive Research</div>
+        <div class="step-desc">Opportunity and insight-based research that shapes product strategy, pricing and go-to-market approach.</div>
+      </div>
+      <div class="delivery-step fade-in">
+        <div class="step-num">04</div>
+        <div class="step-badge">4</div>
+        <div class="step-title">Develop & Test</div>
+        <div class="step-desc">Agile development cycles with rigorous testing protocols ensuring reliability, security and performance.</div>
+      </div>
+    </div>
+    <div class="delivery-steps-row2">
+      <div class="delivery-step fade-in">
+        <div class="step-num">05</div>
+        <div class="step-badge">5</div>
+        <div class="step-title">Solution Packaging, Deployment & Consultations</div>
+        <div class="step-desc">Tailored deployment plans with hands-on consultation to ensure smooth client onboarding and adoption.</div>
+      </div>
+      <div class="delivery-step fade-in">
+        <div class="step-num">06</div>
+        <div class="step-badge">6</div>
+        <div class="step-title">Scaling & Commercialization</div>
+        <div class="step-desc">Growth-stage strategy encompassing pricing, distribution partnerships and market expansion into new geographies.</div>
+      </div>
+      <div class="delivery-step fade-in">
+        <div class="step-num">07</div>
+        <div class="step-badge">7</div>
+        <div class="step-title">Maintenance & Continuous Updates</div>
+        <div class="step-desc">Ongoing platform maintenance, feature releases and proactive support ensuring clients always operate at peak capability.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEGMENTS -->
+<section id="segments">
+  <div class="container">
+    <div class="section-header segments-intro fade-in">
+      <div class="section-eyebrow">Our Target Markets</div>
+      <h2 class="section-title">Industry Business Segments</h2>
+      <p class="section-sub">Scholarstix targets independent SMMEs through 12 purpose-built vertical platforms — each with its own brand identity, AI capabilities and operational focus.</p>
+    </div>
+    <div class="segments-grid">
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:var(--green-400)"></div>
+        <div class="seg-card-industry">Healthcare</div>
+        <div class="seg-card-name">Medical Practice Management</div>
+        <div class="seg-card-brand">IntelliMed</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:var(--circuit-blue)"></div>
+        <div class="seg-card-industry">Supermarket Retail & Wholesale</div>
+        <div class="seg-card-name">POS & Inventory Intelligence</div>
+        <div class="seg-card-brand">SuperSentrix</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:var(--gold)"></div>
+        <div class="seg-card-industry">Events Management</div>
+        <div class="seg-card-name">End-to-End Event Operations</div>
+        <div class="seg-card-brand">Eventrix</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:var(--teal-400)"></div>
+        <div class="seg-card-industry">Funeral Homes & Services</div>
+        <div class="seg-card-name">Bereavement Service Management</div>
+        <div class="seg-card-brand">MemoriX</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:#e67e22"></div>
+        <div class="seg-card-industry">Liquor Trade</div>
+        <div class="seg-card-name">Liquor Retail Operations</div>
+        <div class="seg-card-brand">SipSpace</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:#c0392b"></div>
+        <div class="seg-card-industry">Pub & Meat Griller</div>
+        <div class="seg-card-name">F&B & Hospitality Management</div>
+        <div class="seg-card-brand">Fork & Flame</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:#8e44ad"></div>
+        <div class="seg-card-industry">Builders & Hardware</div>
+        <div class="seg-card-name">Hardware Store Intelligence</div>
+        <div class="seg-card-brand">Hammer-Time</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:#2c3e50"></div>
+        <div class="seg-card-industry">Auto Spares</div>
+        <div class="seg-card-name">Auto Parts & Workshop Ops</div>
+        <div class="seg-card-brand">Gear-Up</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:var(--teal-300)"></div>
+        <div class="seg-card-industry">Transport Logistics</div>
+        <div class="seg-card-name">Fleet & Route Optimization</div>
+        <div class="seg-card-brand">NovaRoute</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:var(--green-300)"></div>
+        <div class="seg-card-industry">Education</div>
+        <div class="seg-card-name">EdTech & Learning Management</div>
+        <div class="seg-card-brand">Ecco-Roots</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:#1abc9c"></div>
+        <div class="seg-card-industry">MRO (Maintenance, Repair & Overhaul)</div>
+        <div class="seg-card-name">Maintenance Operations System</div>
+        <div class="seg-card-brand">Relybex</div>
+      </div>
+      <div class="seg-card fade-in">
+        <div class="seg-card-accent" style="background:#e74c3c"></div>
+        <div class="seg-card-industry">Manufacturing Operations</div>
+        <div class="seg-card-name">Production & Factory Intelligence</div>
+        <div class="seg-card-brand">Micro-Pulse · UBOS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-eyebrow">Live Products</div>
+      <h2 class="section-title">Current Application Products</h2>
+      <p class="section-sub">AI-powered Android applications available now — engineered for Android 14+ smart devices and ready for deployment.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card fade-in">
+        <div class="product-icon-wrap green">🛒</div>
+        <div>
+          <div class="product-segment">From SuperSentrix</div>
+          <div class="product-name">SuperSentrix POS</div>
+          <div class="product-desc">An AI-powered mobile Point-of-Sale Android application built for supermarkets and wholesale retailers. Intelligent inventory management, sales analytics and real-time reporting — all from your Android 14+ device.</div>
+          <span class="product-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            Android 14+ · SuperSentrix
+          </span>
+        </div>
+      </div>
+      <div class="product-card fade-in">
+        <div class="product-icon-wrap blue">🎟️</div>
+        <div>
+          <div class="product-segment">From Eventrix</div>
+          <div class="product-name">Eventrix-Go</div>
+          <div class="product-desc">An AI-powered Events Management mobile Android application. Full event lifecycle management from planning and ticketing to vendor coordination and post-event analytics — purpose-built for event professionals.</div>
+          <span class="product-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            Android 14+ · Eventrix
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="fade-in">
+        <div class="section-eyebrow">Reach Out</div>
+        <h2 class="section-title">Let's Build Something Together</h2>
+        <div class="section-divider"></div>
+        <p style="color:var(--teal-100);margin-bottom:2.5rem;line-height:1.8;max-width:440px;">
+          Whether you're an SMME ready to transform your operations, a potential partner, or an investor — we'd love to hear from you. Reach out and let's start a conversation.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Headquarters</div>
+              <div class="contact-item-val">Meredale, Johannesburg (Serving Africa & Beyond)</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-val">info@scholarstix.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Website</div>
+              <div class="contact-item-val">www.scholarstix.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfbv0Eyz1zVxP4BYP4TLoabzKRavZH5XH9oOwH9e-KaerqLUA/viewform?embedded=true" 
+          width="100%" 
+          height="750" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0" 
+          title="Scholarstix contact form">
+          Loading…
+        </iframe>
+        <p style="font-size: 12px; color: var(--teal-200); text-align: center; margin-top: 1rem;">
+          We respect your privacy. Your information will not be shared.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-block">
+      <div class="footer-logo">
+        <div class="footer-logo-circle">
+          <img src="scholarstix.png" alt="Scholarstix Unlimited Inc. logo">
+        </div>
+        <div>
+          <div class="footer-logo-name">Scholarstix Unlimited Inc.</div>
+          <div class="footer-logo-sub">Innovating Efficiency · Improving Productivity</div>
+        </div>
+      </div>
+      <p class="footer-tagline">
+        AI-powered operating systems that replace operational chaos with control — built for Africa's SMMEs and beyond.
+      </p>
+      <div class="footer-social">
+        <a href="www.linkedin.com/in/teboho-moloi-scholarstix" class="social-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://x.com/ScholarstixU" class="social-btn" title="Twitter/X" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/scholarstix_unlimitedinc/" class="social-btn" title="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@scholarstixunlimitedinc" class="social-btn" title="TikTok" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v4a9 9 0 0 1-4-1v5a4 4 0 1 1-4-4v4z"/></svg>
+        </a>
+        <a href="mailto:info@scholarstix.com" class="social-btn" title="Email">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <div class="footer-links">
+        <a href="#about">About Scholarstix</a>
+        <a href="#vmv">Vision & Mission</a>
+        <a href="#vmv">Our Values</a>
+        <a href="#delivery">How We Deliver</a>
+        <a href="#contact">Careers</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Solutions</div>
+      <div class="footer-links">
+        <a href="#segments">IntelliMed</a>
+        <a href="#segments">SuperSentrix</a>
+        <a href="#segments">Eventrix</a>
+        <a href="#segments">MemoriX</a>
+        <a href="#segments">NovaRoute</a>
+        <a href="#segments">View All Segments →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Products</div>
+      <div class="footer-links">
+        <a href="#products">SuperSentrix POS App</a>
+        <a href="#products">Eventrix-Go Events App</a>
+        <a href="#contact">Request a Demo</a>
+        <a href="#contact">Partnership Enquiries</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-text">© 2026 Scholarstix Unlimited Inc. All rights reserved. · www.scholarstix.com</div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Intersection observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Mobile menu toggle
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = '';
+      links.style.flexDirection = '';
+      links.style.position = '';
+      links.style.top = '';
+      links.style.left = '';
+      links.style.right = '';
+      links.style.background = '';
+      links.style.padding = '';
+      links.style.gap = '';
+      links.style.borderBottom = '';
+    } else {
+      links.style.display = 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '72px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'rgba(10,46,40,0.98)';
+      links.style.padding = '1.5rem 2rem';
+      links.style.gap = '1.2rem';
+      links.style.borderBottom = '1px solid rgba(58,174,155,0.2)';
+    }
+  }
+
+  // Reset mobile menu on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 960) {
+      const links = document.querySelector('.nav-links');
+      links.style.display = '';
+      links.style.flexDirection = '';
+      links.style.position = '';
+      links.style.top = '';
+      links.style.left = '';
+      links.style.right = '';
+      links.style.background = '';
+      links.style.padding = '';
+      links.style.gap = '';
+      links.style.borderBottom = '';
+    }
+  });
+</script>
+</body>
+</html>
